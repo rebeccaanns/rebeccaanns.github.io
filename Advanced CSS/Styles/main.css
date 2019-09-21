@@ -12,12 +12,53 @@ img{
     max-width: 100%;
 }
 
+header{
+    background-color: #6495ed;
+    color: #faebd7;
+}
+
 body{
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1.2em;
     margin: 0;
     padding: 0;
     height 100%;
+}
+
+nav a, nav a:visited{
+    color: #FAEBD7;
+    text-decoration: none;
+}
+
+nav a:active, a:active, article a:active{
+    color: #DEB887;
+}
+
+nav a:hover, a:hover{
+    text-decoration: underline;
+}
+
+a, a:visited{
+    color: #6495ED;
+    text-decoration: none;
+}
+
+article a, article a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+article a:hover{
+    color: #6495ED;
+    text-decoration: underline;
+}
+
+h1, h2{
+    font-family: Lora, serif;
+}
+
+main{
+    background-color: #faebd7;
 }
 
 @media screen and (min-width: 50em){
