@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+img{
+    max-width: 100%;
+}
+
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+    height 100%;
+}
+
+@media screen and (min-width: 50em){
+    body > div{
+        width: 80%;
+        max-width: 75em;
+        margin: 0 auto;
+    }
+    article{
+        flex-flow: row nowrap;
+    }
+    .post-date{
+        width: 25%;
+    }
+    .post-content{
+        border-left: 1px solid #d0d0d0;
+        border-bottom: 1px dotted #d0d0d0;
+        border-top: 0;
+        width 75%;
+        flex: 3;
+    }
+}
