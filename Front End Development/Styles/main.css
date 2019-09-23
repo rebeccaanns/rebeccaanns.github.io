@@ -36,4 +36,14 @@ header img {
     width: auto;
     height: auto;
     float: right;
+    box-shadow: 5px 5px 5px gray
+}
+
+footer{
+    font-size: smaller;
+}
+
+ul{
+    margin: 0 auto;
+    max-width: 300px;
 }
