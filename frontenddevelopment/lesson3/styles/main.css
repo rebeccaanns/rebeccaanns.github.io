@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+li{
+    float: left;
+    margin: 0px 10px 0px 10px;
+    list-style-type: none;
+    padding-left: 0;
+}
