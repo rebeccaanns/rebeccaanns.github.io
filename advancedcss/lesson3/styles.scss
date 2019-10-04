@@ -1,1 +1,11 @@
 /* variables will follow */
+
+/*COLORS*/
+$body-background-color: aqua;
+$form-background-color: white;
+$input-color: white;
+$headline-color: white;
+
+body{
+    background-color: $body-background-color;
+}
