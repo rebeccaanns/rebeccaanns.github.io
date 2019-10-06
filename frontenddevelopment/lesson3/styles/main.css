@@ -5,7 +5,7 @@
 
 .active{
     color: #ff6b6b;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 a:link{
@@ -14,6 +14,10 @@ a:link{
 
 a:hover{
     color: #4ecdc4;
+}
+
+article{
+    padding: 0px 45px;
 }
 
 body{
@@ -37,13 +41,17 @@ li{
     font-family: 'Josefin Sans', sans-serif;
 }
 
+.name{
+    padding-left: 45px;
+}
+
 p{
     font-family: 'Raleway', sans-serif;
 }
 
 section{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
 ul{
