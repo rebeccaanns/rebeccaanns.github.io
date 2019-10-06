@@ -1,10 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway&display=swap');
+
+/* font-family: 'Raleway', sans-serif; body*/
+/* font-family: 'Josefin Sans', sans-serif; headlines*/
+
+.active{
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:hover{
+    color: #4ecdc4;
+}
+
 body{
     margin: 0;
     padding: 0;
 }
 
-a:link{
-    text-decoration: none;
+h1, h2{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+img{
+    width: 400px;
 }
 
 li{
@@ -12,15 +34,22 @@ li{
     list-style-type: none;
     padding-left: 0; 
     font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+p{
+    font-family: 'Raleway', sans-serif;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 ul{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-}
-
-section{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    background-color: #ceeaf7;
+    padding: 7px 0px;
 }
