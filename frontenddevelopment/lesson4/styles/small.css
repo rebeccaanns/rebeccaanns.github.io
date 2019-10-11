@@ -44,6 +44,34 @@ li{
     font-size: .9rem;
 }
 
+nav{
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.navigation{
+    text-align: center;
+    padding: 0;
+}
+
+.navigation a{
+    display: block;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.navigation li:first-child{
+    display: block;
+}
+
+.navigation li{
+    display: none;
+}
+
 p{
     font-family: 'Raleway', sans-serif;
+}
+
+.responsive li{
+    display: block;
 }
