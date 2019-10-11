@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway&display=swap');
+
+footer p{
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#logo{
+    width: 50px;
+}
+
+p{
+    font-family: 'Raleway', sans-serif;
+}
