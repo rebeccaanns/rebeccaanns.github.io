@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway&display=swap');
 
+a{
+    text-decoration: none;
+}
+
 footer p{
     text-align: center;
 }
@@ -8,8 +12,36 @@ h1, h2, h3, h4, h5, h6{
     font-family: 'Josefin Sans', sans-serif;
 }
 
+header{
+    padding: 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headings{
+    display: flex;
+    flex-direction: column;
+}
+
+.headings h1{
+    font-size: 1.6rem;
+    margin: 0px 0px 0px 17px;
+}
+
+li{
+    list-style-type: none;
+}
+
 #logo{
-    width: 50px;
+    width: 80px;
+}
+
+.motto{
+    font-style: italic;
+    letter-spacing: 1pt;
+    margin-left: 20px;
+    font-size: .9rem;
 }
 
 p{
