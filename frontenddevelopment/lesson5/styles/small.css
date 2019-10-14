@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway&display=swap');
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: #ff6b6b;
+    color: white;
+}
+
+footer{
+    background-color: #ceeaf7;
+    padding: 3px 0px;
+}
+
+footer p{
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #98dfea;
+}
+
+header{
+    padding: 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4ecdc4;
+}
+
+.headings{
+    display: flex;
+    flex-direction: column;
+}
+
+.headings h1{
+    font-size: 1.6rem;
+    margin: 0px 0px 0px 17px;
+    text-align: center;
+}
+
+li{
+    list-style-type: none;
+}
+
+#logo{
+    width: 80px;
+}
+
+main h2{
+    text-align: center;
+}
+
+main section{
+    background-color: #f4f4f4;
+    border: 1px #292f36 double;
+    margin: 10px;
+    padding-left: 10px;
+}
+
+.motto{
+    font-style: italic;
+    letter-spacing: 1pt;
+    margin-left: 20px;
+    font-size: .9rem;
+    text-align: center;
+}
+
+nav{
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.navigation{
+    text-align: center;
+    padding: 0;
+    background-color: #ceeaf7;
+}
+
+.navigation a{
+    display: block;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.navigation li:first-child{
+    display: block;
+}
+
+.navigation li{
+    display: none;
+}
+
+p{
+    font-family: 'Raleway', sans-serif;
+    color: #292f36;
+}
+
+.responsive li{
+    display: block;
+}
