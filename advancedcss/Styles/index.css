@@ -1,19 +1,21 @@
 body {
     font-size: 16px;
     line-height: 32px;
-    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #000000;
 }
 
 h1 {
     font-size: 2.4rem;
     color: #ffffff;
+    font-family: "Yanone Kaffeesatz", sans-serif;
 }
 
 h2 {
     font-size: 2.0rem;
     text-align: center;
     border-bottom: 1px solid #bbbbbb;
+    font-family: "Yanone Kaffeesatz", sans-serif;
 }
 
 header,
@@ -35,5 +37,14 @@ footer a {
 header img {
     width: auto;
     height: auto;
-    float: right;
+    box-shadow: 5px 5px 5px gray
+}
+
+footer{
+    font-size: smaller;
+}
+
+ul{
+    margin: 0 auto;
+    max-width: 300px;
 }
