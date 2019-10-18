@@ -28,6 +28,10 @@ a:hover::before{
     color: white;
 }
 
+#fiveDay{
+    display: none;
+}
+
 footer{
     background-color: #ceeaf7;
     padding: 3px 0px;
@@ -74,10 +78,12 @@ main h2{
 }
 
 main section{
-    /*background-color: #f4f4f4;
-    border: 1px #292f36 double;*/
     margin: 10px;
     padding-left: 10px;
+}
+
+#map{
+    display: none;
 }
 
 .motto{
