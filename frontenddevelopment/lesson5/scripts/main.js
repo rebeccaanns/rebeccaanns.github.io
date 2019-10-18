@@ -39,14 +39,21 @@ dateString = weekDay + ", " + currentDate.getDate() + " " + monthName + " " + cu
 
 document.getElementById("currentDate").innerHTML = dateString;
 
-function toggleMenu(){
+function toggleMenu() {
     document.getElementsByClassName("navigation")[0].classList.toggle("responsive");
 }
 
 //5 day forecast
-let day1, day2, day3, day4, day5;
+let currentDay = weekDayNum;
 
-if(weekDayNum < 6){
-    day1 = daysOfWeek[weekDayNum + 1];
-    document.getElementById("day1").innerHTML = day1;
+for (let i = 1; i < 6; i++) {
+    currentDay++;
+
+    if (currentDay > 6) {
+        currentDay = 0;
+    }
+
+    const element = document.getElementById(`day${i}`);
+
+    element.innerHTML = daysOfWeek[currentDay];
 }
