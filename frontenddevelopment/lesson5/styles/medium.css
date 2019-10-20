@@ -1,6 +1,16 @@
 @media only screen and (min-width: 32.5em){
+    article, article h3, article h4{
+        text-align: right;
+    }
+    
+    article img{
+        float: right;
+        margin-left: 8px;
+    }
+    
     #fiveDay{
         display: block;
+        text-align: center;
     }
     
     .headings h1{
@@ -13,7 +23,9 @@
 
     #map{
         display: flex;
-        flex-direction: column;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .motto{
@@ -33,5 +45,10 @@
     .navigation li{
         display: block;
         flex: 1 1 100%;
+    }
+
+    table{
+        margin-left: auto;
+        margin-right: auto;
     }
 }

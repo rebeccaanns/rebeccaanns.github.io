@@ -21,11 +21,34 @@ a::before{
     z-index: -1;
 }
 
-a:hover::before{
+nav a:hover::before{
     opacity: 1;
     width: 200%;
     background-color: #ff6b6b;
     color: white;
+}
+
+article{
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(78, 205, 196, 0.2);
+    padding: 15px 25px;
+}
+
+article h3{
+    text-align: center;
+}
+
+article h4{
+    margin-top: -7px;
+    text-align: center;
+}
+
+#contact{
+    background-color: rgba(204, 204, 204, .3);
+	padding: 25px;
+	text-align: center;
 }
 
 #fiveDay{
@@ -39,6 +62,10 @@ footer{
 
 footer p{
     text-align: center;
+}
+
+#group{
+    max-width: 235px;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -63,6 +90,14 @@ header{
     font-size: 1.6rem;
     margin: 0px 0px 0px 17px;
     text-align: center;
+}
+
+#hero{
+    position: relative;
+}
+
+#heroPic{
+    max-width: 100%;
 }
 
 .hidden{
@@ -130,7 +165,6 @@ nav{
 
 p, th, td{
     font-family: 'Raleway', sans-serif;
-    color: #292f36;
 }
 
 .responsive li{
@@ -140,4 +174,126 @@ p, th, td{
 td, th{
     border: 1px solid black;
     text-align: center;
+}
+
+#weatherSummary{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(78, 205, 196, 0.8);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Wrapper */
+.icon-button {
+	background-color: white;
+	border-radius: 2.6rem;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1.3rem;
+	height: 2.6rem;
+	line-height: 2.6rem;
+	margin: 0 5px;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	width: 2.6rem;
+}
+
+/* Circle */
+.icon-button span {
+	border-radius: 0;
+	display: block;
+	height: 0;
+	left: 50%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 0;
+}
+.icon-button:hover span {
+	width: 2.6rem;
+	height: 2.6rem;
+	border-radius: 2.6rem;
+	margin: -1.3rem;
+}
+
+/* Icons */
+.icon-button i {
+	background: none;
+	color: white;
+	height: 2.6rem;
+	left: 0;
+	line-height: 2.6rem;
+	position: absolute;
+	top: 0;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 2.6rem;
+	z-index: 10;
+}
+
+.twitter span {
+	background-color: #4099ff;
+}
+.facebook span {
+	background-color: #3B5998;
+}
+.google-plus span {
+	background-color: #db5a3c;
+}
+.tumblr span {
+	background-color: #34526f;
+}
+.instagram span {
+	background-color: #517fa4;
+}
+.youtube span {
+	background-color: #bb0000;
+}
+.pinterest span {
+	background-color: #cb2027;
+}
+
+.icon-button .icon-twitter {
+	color: #4099ff;
+}
+.icon-button .icon-facebook {
+	color: #3B5998;
+}
+.icon-button .fa-tumblr {
+	color: #34526f;
+}
+.icon-button .icon-google-plus {
+	color: #db5a3c;
+}
+.icon-button .fa-instagram {
+	color: #517fa4;
+}
+.icon-button .fa-youtube {
+	color: #bb0000;
+}
+.icon-button .fa-pinterest {
+	color: #cb2027;
+}
+
+.icon-button:hover .icon-twitter,
+.icon-button:hover .icon-facebook,
+.icon-button:hover .icon-google-plus,
+.icon-button:hover .fa-tumblr,
+.icon-button:hover .fa-instagram,
+.icon-button:hover .fa-youtube,
+.icon-button:hover .fa-pinterest {
+	color: white;
 }

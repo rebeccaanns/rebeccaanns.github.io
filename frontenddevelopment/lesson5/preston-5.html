@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css">
@@ -36,13 +38,21 @@
     <main>
         <h2>Preston, Idaho</h2>
         <section id="pancake" class="hidden">
-            <p>Preston Pancakes in the Park!  9:00 a.m. Saturday at the city park pavilion.</p>
+            <p>Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion.</p>
         </section>
-        <section>
-            <p>Hero w/ weather summary</p>
+        <section id="hero">
+            <img src="images/preston.jpg" alt="Image of Preston, Idaho by Allie Smith" id="heroPic">
+            <div id=weatherSummary>
+                <h3>Weather Summary</h3>
+                <p>Currently: Sunny</p>
+                <p>High: 76&deg;F</p>
+                <p>Wind Chill: &deg;F</p>
+                <p>Humidity: 69%</p>
+                <p>Wind Speed: 5 mph</p>
+            </div>
         </section>
         <section id="fiveDay">
-            <h3>High Temperature Forecast</h3>
+            <h3>5 Day Forecast</h3>
             <table>
                 <tr>
                     <th>Day</th>
@@ -63,23 +73,45 @@
             </table>
         </section>
         <section>
-            <p>Article</p>
+            <article>
+                <img src="images/group.jpg" alt="Group of people sitting on a bench" id="group">
+                <h3>Weather Article</h3>
+                <h4>By: someone</h4>
+                <p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced
+                    by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex!</p>
+
+                <p>Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl
+                    quack. Quick wafting zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim. Sex-charged fop blew
+                    my junk TV quiz. How quickly daft jumping zebras vex. Two driven jocks help fax my big quiz. Quick,
+                    Baz, get my woven flax jodhpurs! "Now fax quiz Jack! " my brave</p>
+            </article>
         </section>
-        <section>
-            <p>Contact Information</p>
+        <section id="contact">
+            <div>
+                <p><b>Just Beachy Weather</b></p>
+                <p>&#9969; 30 N 1st E</p>
+                <p>Preston, Idaho 83263</p>
+            </div>
+            <div>
+                <p>&#9743; 999.999.9999</p>
+                <p>&#9993; justbeachyweather@jbw.com</p>
+            </div>
+            <div>
+                <a href="#" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
+                <a href="#" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+                <a href="#" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
+                <a href="#" class="icon-button youtube"><i class="fa fa-youtube"></i><span></span></a>
+                <a href="#" class="icon-button pinterest"><i class="fa fa-pinterest"></i><span></span></a>
+            </div>
         </section>
     </main>
 
     <footer>
-        <div>
-            <p> &copy; Just Beachy Weather | Attributions | Becca Stucki</p>
-            <p><span id="currentDate"></span></p>
-        </div>
-        <div id="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47365.773853446575!2d-111.91534446880078!3d42.09974162637902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C%20ID%2083263!5e0!3m2!1sen!2sus!4v1571243673415!5m2!1sen!2sus"
-                height="150" width="150" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-        </div>
+        <p> &copy; Just Beachy Weather | Attributions | Becca Stucki</p>
+        <p><span id="currentDate"></span></p>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47365.773853446575!2d-111.91534446880078!3d42.09974162637902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C%20ID%2083263!5e0!3m2!1sen!2sus!4v1571243673415!5m2!1sen!2sus"
+            height="150" width="150" frameborder="0" style="border:0;" allowfullscreen="" id="map"></iframe>
     </footer>
     <script src="scripts/main.js"></script>
 </body>
