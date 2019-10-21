@@ -66,6 +66,7 @@ footer p{
 
 #group{
     max-width: 235px;
+    box-shadow: 3px -2px 7px grey;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -169,6 +170,11 @@ p, th, td{
 
 .responsive li{
     display: block;
+}
+
+#summary{
+    color: white;
+    font-weight: bold;
 }
 
 td, th{
