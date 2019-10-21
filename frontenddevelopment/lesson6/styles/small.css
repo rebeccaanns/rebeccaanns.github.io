@@ -259,9 +259,6 @@ td, th{
 .google-plus span {
 	background-color: #db5a3c;
 }
-.tumblr span {
-	background-color: #34526f;
-}
 .instagram span {
 	background-color: #517fa4;
 }
@@ -277,9 +274,6 @@ td, th{
 }
 .icon-button .icon-facebook {
 	color: #3B5998;
-}
-.icon-button .fa-tumblr {
-	color: #34526f;
 }
 .icon-button .icon-google-plus {
 	color: #db5a3c;
@@ -297,7 +291,6 @@ td, th{
 .icon-button:hover .icon-twitter,
 .icon-button:hover .icon-facebook,
 .icon-button:hover .icon-google-plus,
-.icon-button:hover .fa-tumblr,
 .icon-button:hover .fa-instagram,
 .icon-button:hover .fa-youtube,
 .icon-button:hover .fa-pinterest {
