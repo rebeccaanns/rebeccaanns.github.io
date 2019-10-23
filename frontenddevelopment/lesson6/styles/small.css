@@ -164,7 +164,7 @@ nav{
     display: none;
 }
 
-p, th, td{
+p, th, td, span{
     font-family: 'Raleway', sans-serif;
 }
 

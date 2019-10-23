@@ -44,11 +44,20 @@
             <img src="images/preston.jpg" alt="Image of Preston, Idaho by Allie Smith" id="heroPic">
             <div id=weatherSummary>
                 <h3 id="summary">Weather Summary</h3>
-                <p>Currently: Sunny</p>
-                <p>High: 76&deg;F</p>
-                <p>Wind Chill: &deg;F</p>
-                <p>Humidity: 69%</p>
-                <p>Wind Speed: 5 mph</p>
+                <p>
+                    <span>Current Temperature: </span>
+                    <span id="currentTemp"></span>
+                </p>
+                <!-- <p>High: 76&deg;F</p> -->
+                <p>
+                    <span>Windchill: </span>
+                    <span id="windChill"></span>
+                </p>
+                <!-- <p>Humidity: 69%</p> -->
+                <p>
+                    <span>Wind Speed: </span>
+                    <span id="windSpeed"></span>
+                </p>
             </div>
         </section>
         <section id="fiveDay">
@@ -113,7 +122,7 @@
             height="150" width="150" frameborder="0" style="border:0;" allowfullscreen="" id="map"></iframe>
     </footer>
     <script src="scripts/main.js"></script>
-    <script> src="scripts/windchill.js"</script>
+    <script src="scripts/windchill.js"></script>
 </body>
 
 </html>
