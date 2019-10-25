@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
+    <link rel="shortcut icon" href="images/favicon.png">
     <title>Preston Town Page</title>
 </head>
 
@@ -48,7 +49,11 @@
             </div>
         </section>
         <section id="hero">
-            <img src="images/preston.jpg" alt="Image of Preston, Idaho by Allie Smith" id="heroPic">
+            <img src="images/small.jpg"
+                 srcset="images/large.jpg 1200w,
+                        images/medium.jpg 800w,
+                        images/small.jpg 400w" id="heroPic">
+            <!-- <img src="images/preston.jpg" alt="Image of Preston, Idaho by Allie Smith" id="heroPic"> -->
             <div id=weatherSummary>
                 <h3 id="summary">Weather Summary</h3>
                 <p>
