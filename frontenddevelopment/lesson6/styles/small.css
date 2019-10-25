@@ -192,6 +192,7 @@ td, th{
     padding-right: 20px;
 }
 
+/*ICONS*/
 /* Wrapper */
 .icon-button {
 	background-color: white;
@@ -296,3 +297,50 @@ td, th{
 .icon-button:hover .fa-pinterest {
 	color: white;
 }
+
+/*PANCAKE*/
+.svg-wrapper{
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(50%);
+    width: 320px;
+}
+
+.shape{
+    fill: transparent;
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    stroke: #4ecdc4;
+}
+
+.pancakeText{
+    font-size: 13px;
+    letter-spacing: 2px;
+    line-height: 20px;
+    position: relative;
+    top: -20px;
+    text-align: center;
+    margin: 0 auto;
+    width: 320px;
+}
+
+@keyframes draw {
+    0% {
+      stroke-dasharray: 140 540;
+      stroke-dashoffset: -474;
+      stroke-width: 8px;
+    }
+    100% {
+      stroke-dasharray: 760;
+      stroke-dashoffset: 0;
+      stroke-width: 2px;
+    }
+  }
+  
+  .svg-wrapper:hover .shape {
+    -webkit-animation: 0.5s draw linear forwards;
+    animation: 0.5s draw linear forwards;
+  }
