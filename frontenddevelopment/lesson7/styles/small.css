@@ -28,6 +28,10 @@ nav a:hover::before{
     color: white;
 }
 
+.active{
+    font-weight: bolder;
+}
+
 article{
     max-width: 50%;
     margin-left: auto;
@@ -91,6 +95,7 @@ header{
     font-size: 1.6rem;
     margin: 0px 0px 0px 17px;
     text-align: center;
+    text-shadow: 3px 2px 7px gray;
 }
 
 #hero{
