@@ -12,6 +12,10 @@
         display: block;
         text-align: center;
     }
+
+    #gallery{
+        grid-template-columns: 1fr 1fr;
+    }
     
     .headings h1{
         font-size: 3rem;

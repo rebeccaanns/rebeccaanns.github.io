@@ -68,6 +68,15 @@ footer p{
     text-align: center;
 }
 
+#gallery{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.galleryPics{
+    max-width: 300px;
+}
+
 #group{
     max-width: 235px;
     box-shadow: 3px -2px 7px grey;
@@ -125,6 +134,7 @@ main h2{
 main section{
     margin: 10px;
     padding-left: 10px;
+    padding-right: 10px;
 }
 
 #map{
@@ -190,7 +200,7 @@ td, th{
 #weatherSummary{
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    left: 25px;
     background: rgba(78, 205, 196, 0.8);
     color: white;
     padding-left: 20px;
