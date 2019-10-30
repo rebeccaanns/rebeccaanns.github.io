@@ -98,6 +98,14 @@ header{
     text-shadow: 3px 3px 7px gray;
 }
 
+#hero{
+    position: relative;
+}
+
+#heroPic{
+    max-width: 100%;
+}
+
 .hidden{
     display: none;
 }
@@ -168,3 +176,176 @@ p, th, td, span{
 .responsive li{
     display: block;
 }
+
+#summary{
+    color: white;
+    font-weight: bold;
+}
+
+td, th{
+    border: 1px solid black;
+    text-align: center;
+}
+
+#weatherSummary{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(78, 205, 196, 0.8);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*ICONS*/
+/* Wrapper */
+.icon-button {
+	background-color: white;
+	border-radius: 2.6rem;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1.3rem;
+	height: 2.6rem;
+	line-height: 2.6rem;
+	margin: 0 5px;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	width: 2.6rem;
+}
+
+/* Circle */
+.icon-button span {
+	border-radius: 0;
+	display: block;
+	height: 0;
+	left: 50%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 0;
+}
+.icon-button:hover span {
+	width: 2.6rem;
+	height: 2.6rem;
+	border-radius: 2.6rem;
+	margin: -1.3rem;
+}
+
+/* Icons */
+.icon-button i {
+	background: none;
+	color: white;
+	height: 2.6rem;
+	left: 0;
+	line-height: 2.6rem;
+	position: absolute;
+	top: 0;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 2.6rem;
+	z-index: 10;
+}
+
+.twitter span {
+	background-color: #4099ff;
+}
+.facebook span {
+	background-color: #3B5998;
+}
+.google-plus span {
+	background-color: #db5a3c;
+}
+.instagram span {
+	background-color: #517fa4;
+}
+.youtube span {
+	background-color: #bb0000;
+}
+.pinterest span {
+	background-color: #cb2027;
+}
+
+.icon-button .icon-twitter {
+	color: #4099ff;
+}
+.icon-button .icon-facebook {
+	color: #3B5998;
+}
+.icon-button .icon-google-plus {
+	color: #db5a3c;
+}
+.icon-button .fa-instagram {
+	color: #517fa4;
+}
+.icon-button .fa-youtube {
+	color: #bb0000;
+}
+.icon-button .fa-pinterest {
+	color: #cb2027;
+}
+
+.icon-button:hover .icon-twitter,
+.icon-button:hover .icon-facebook,
+.icon-button:hover .icon-google-plus,
+.icon-button:hover .fa-instagram,
+.icon-button:hover .fa-youtube,
+.icon-button:hover .fa-pinterest {
+	color: white;
+}
+
+/*PANCAKE*/
+.svg-wrapper{
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(50%);
+    width: 320px;
+}
+
+.shape{
+    fill: transparent;
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    stroke: #ff6b6b;
+}
+
+.pancakeText{
+    font-size: 13px;
+    letter-spacing: 2px;
+    line-height: 20px;
+    position: relative;
+    top: -20px;
+    text-align: center;
+    margin: 0 auto;
+    width: 320px;
+}
+
+@keyframes draw {
+    0% {
+      stroke-dasharray: 140 540;
+      stroke-dashoffset: -474;
+      stroke-width: 8px;
+    }
+    100% {
+      stroke-dasharray: 760;
+      stroke-dashoffset: 0;
+      stroke-width: 2px;
+    }
+  }
+  
+  .svg-wrapper:hover .shape {
+    -webkit-animation: 0.5s draw linear forwards;
+    animation: 0.5s draw linear forwards;
+  }
