@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/modal.css">
     <link rel="shortcut icon" href="images/favicon.png">
     <title>Gallery</title>
 </head>
@@ -38,54 +39,68 @@
 
     <main>
         <h2>Gallery</h2>
-        <h6>Click to Enlarge Images</h6>
+        <h5 id="enlarge">Click to Enlarge Images</h5>
         <section id="gallery">
-            <figure>
-                <img src="images/1.jpg" alt="Photo by Mitchell Kmetz on Unsplash" class="galleryPics">
-                <figcaption></figcaption>
-            </figure>
+                <figure class="imageGridFigure">
+                    <img src="images/placeholder.jpg" data-src="images/1.jpg" alt="Photo by Mitchell Kmetz on Unsplash"
+                        class="galleryPics imageGridImg">
+                    <figcaption class="imageGridCaption">Photo by Mitchell Kmetz on Unsplash</figcaption>
+                </figure>
 
-            <figure>
-                <img src="images/2.jpg" alt="Photo by Allie Smith on Unsplash" class="galleryPics">
-                <figcaption></figcaption>
-            </figure>
+                <figure class="imageGridFigure">
+                    <img src="images/placeholder.jpg" data-src="images/2.jpg" alt="Photo by Allie Smith on Unsplash"
+                        class="galleryPics imageGridImg">
+                    <figcaption class="imageGridCaption">Photo by Allie Smith on Unsplash</figcaption>
+                </figure>
 
-            <figure>
-                <img src="images/3.jpg" alt="Photo by Alec baker on Unsplash" class="galleryPics">
-                <figcaption></figcaption>
-            </figure>
+                <figure class="imageGridFigure">
+                    <img src="images/placeholder.jpg" data-src="images/3.jpg" alt="Photo by Alec baker on Unsplash"
+                        class="galleryPics imageGridImg">
+                    <figcaption class="imageGridCaption">Photo by Alec Baker on Unsplash</figcaption>
+                </figure>
 
-            <figure>
-                <img src="images/4.jpg" alt="Photo by Karen Green on Unsplash" class="galleryPics">
-                <figcaption></figcaption>
-            </figure>
+                <figure class="imageGridFigure">
+                    <img src="images/placeholder.jpg" data-src="images/4.jpg" alt="Photo by Karen Green on Unsplash"
+                        class="galleryPics imageGridImg">
+                    <figcaption class="imageGridCaption">Photo by Karen Green on Unsplash</figcaption>
+                </figure>
 
-            <figure>
-                <img src="images/5.jpg" alt="Photo by Vidar Nordli-Mathisen on Unsplash" class="galleryPics">
-                <figcaption></figcaption>
-            </figure>
+                <figure class="imageGridFigure">
+                    <img src="images/placeholder.jpg" data-src="images/5.jpg"
+                        alt="Photo by Vidar Nordli-Mathisen on Unsplash" class="galleryPics imageGridImg">
+                    <figcaption class="imageGridCaption">Photo by Vidar Nordli-Mathisen on Unsplash</figcaption>
+                </figure>
 
-            <figure>
-                <img src="images/6.jpg" alt="Photo by michael podger on Unsplash" class="galleryPics">
-                <figcaption></figcaption>
-            </figure>
+                <figure class="imageGridFigure">
+                    <img src="images/placeholder.jpg" data-src="images/6.jpg" alt="Photo by michael podger on Unsplash"
+                        class="galleryPics imageGridImg">
+                    <figcaption class="imageGridCaption">Photo by Michael Podger on Unsplash</figcaption>
+                </figure>
 
-            <figure>
-                <img src="images/7.jpg" alt="Photo by Max LaRochelle on Unsplash" class="galleryPics">
-                <figcaption></figcaption>
-            </figure>
+                <figure class="imageGridFigure">
+                    <img src="images/placeholder.jpg" data-src="images/7.jpg" alt="Photo by Max LaRochelle on Unsplash"
+                        class="galleryPics imageGridImg">
+                    <figcaption class="imageGridCaption">Photo by Max LaRochelle on Unsplash</figcaption>
+                </figure>
 
-            <figure>
-                <img src="images/8.jpg" alt="Photo by Johannes Plenio on Unsplash" class="galleryPics">
-                <figcaption></figcaption>
-            </figure>
+                <figure class="imageGridFigure">
+                    <img src="images/placeholder.jpg" data-src="images/8.jpg" alt="Photo by Johannes Plenio on Unsplash"
+                        class="galleryPics imageGridImg">
+                    <figcaption class="imageGridCaption">Photo by Johannes Plenio on Unsplash</figcaption>
+                </figure>
 
-            <figure>
-                <img src="images/9.jpg" alt="Photo by Adam Chang on Unsplash" class="galleryPics">
-                <figcaption></figcaption>
-            </figure>
+                <figure class="imageGridFigure">
+                    <img src="images/placeholder.jpg" data-src="images/9.jpg" alt="Photo by Adam Chang on Unsplash"
+                        class="galleryPics imageGridImg">
+                    <figcaption class="imageGridCaption">Photo by Adam Chang on Unsplash</figcaption>
+                </figure>
         </section>
-
+        <div class="modalOverlay closed" id="modalOverlay">
+            <i class="materialIcons modalOverlayClose">&times;</i>
+        </div>
+        <div class="modal closed" id="modal">
+            <img src="images/1.jpg" class="modalImg">
+        </div>
     </main>
 
     <footer>
@@ -94,6 +109,8 @@
     </footer>
     <script src="scripts/currentDate.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="scripts/lazyload.js"></script>
+    <script src="scripts/modal.js"></script>
 </body>
 
 </html>
