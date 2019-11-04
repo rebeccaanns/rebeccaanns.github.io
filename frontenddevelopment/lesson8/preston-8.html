@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <title>Preston Town Page</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/weatherIcon.png" alt="Icon for Just Beachy Weather" id="logo">
+        <section class="headings">
+            <h1>Just Beachy Weather</h1>
+            <p class="motto">Everything you need for your day at the beach</p>
+        </section>
+    </header>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
+            <li><a href="#">Home</a></li>
+            <li class="active"><a href="preston-7.html">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li><a href="#">Storm Center</a></li>
+            <li><a href="gallery-7.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Preston, Idaho</h2>
+        <section id="pancake" class="hidden">
+            <div class="svg-wrapper">
+                <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="shape" height="60" width="320" />
+                </svg>
+            </div>
+            <div class="pancakeText">
+                <p>Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion.</p>
+            </div>
+        </section>
+        <section id="hero">
+            <img src="images/small.jpg"
+                 srcset="images/large.jpg 1200w,
+                        images/medium.jpg 800w,
+                        images/small.jpg 400w" id="heroPic">
+            <!-- <img src="images/preston.jpg" alt="Image of Preston, Idaho by Allie Smith" id="heroPic"> -->
+            <div id="weatherSummary">
+                <h3 id="summary">Weather Summary</h3>
+                <p>
+                    <span>Current Temperature: </span>
+                    <span id="currentTemp"></span>
+                </p>
+                <!-- <p>High: 76&deg;F</p> -->
+                <p>
+                    <span>Windchill: </span>
+                    <span id="windChill"></span>
+                </p>
+                <!-- <p>Humidity: 69%</p> -->
+                <p>
+                    <span>Wind Speed: </span>
+                    <span id="windSpeed"></span>
+                </p>
+            </div>
+        </section>
+        <section id="fiveDay">
+            <h3>5 Day Forecast</h3>
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th id="day1"></th>
+                    <th id="day2"></th>
+                    <th id="day3"></th>
+                    <th id="day4"></th>
+                    <th id="day5"></th>
+                </tr>
+                <tr>
+                    <th>Forecast</th>
+                    <td id="temp1">68&deg;</td>
+                    <td id="temp2">65&deg;</td>
+                    <td id="temp3">72&deg;</td>
+                    <td id="temp4">75&deg;</td>
+                    <td id="temp5">71&deg;</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <article>
+                <img src="images/group.jpg" alt="Group of people sitting on a bench" id="group">
+                <h3>Weather Article</h3>
+                <h4>By: someone</h4>
+                <p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced
+                    by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex!</p>
+
+                <p>Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl
+                    quack. Quick wafting zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim. How quickly daft
+                    jumping zebras vex. Two driven jocks help fax my big quiz. Quick,
+                    Baz, get my woven flax jodhpurs! "Now fax quiz Jack! " my brave</p>
+            </article>
+        </section>
+        <section id="contact">
+            <div>
+                <p><b>Just Beachy Weather</b></p>
+                <p>&#9969; 30 N 1st E</p>
+                <p>Preston, Idaho 83263</p>
+            </div>
+            <div>
+                <p>&#9743; 999.999.9999</p>
+                <p>&#9993; justbeachyweather@jbw.com</p>
+            </div>
+            <div>
+                <a href="#" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
+                <a href="#" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+                <a href="#" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
+                <a href="#" class="icon-button youtube"><i class="fa fa-youtube"></i><span></span></a>
+                <a href="#" class="icon-button pinterest"><i class="fa fa-pinterest"></i><span></span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p> &copy; Just Beachy Weather | Attributions | Becca Stucki</p>
+        <p><span id="currentDate"></span></p>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47365.773853446575!2d-111.91534446880078!3d42.09974162637902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C%20ID%2083263!5e0!3m2!1sen!2sus!4v1571243673415!5m2!1sen!2sus"
+            height="150" width="150" frameborder="0" style="border:0;" allowfullscreen="" id="map"></iframe>
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/windchill.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+</body>
+
+</html>
