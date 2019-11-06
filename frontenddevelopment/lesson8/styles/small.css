@@ -77,6 +77,11 @@ footer p{
     text-align: center;
 }
 
+form{
+    width: 500px;
+    margin: 0 auto;
+}
+
 #gallery{
     display: grid;
     grid-template-columns: 1fr;
@@ -190,7 +195,7 @@ nav{
     display: none;
 }
 
-p, th, td, span, figcaption{
+p, th, td, span, figcaption, label, input{
     font-family: 'Raleway', sans-serif;
 }
 
