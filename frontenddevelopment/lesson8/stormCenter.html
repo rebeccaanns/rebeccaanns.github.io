@@ -40,7 +40,7 @@
         <form action="thanks.html" method="GET">
             <div>
                 <label for="fullName">Full Name:</label>
-                <input type="text" id="fullName" name="fullName" required>
+                <input type="text" id="fullName" name="fullName" required pattern="[A-Za-z ] {5,}">
             </div>
 
             <div>
@@ -78,11 +78,38 @@
 
             <div>
                 <label for="stormSeverity">Storm Severity:</label>
-                <input type="range" id="stormSeverity" name="stormSeverity" min="1" max="10">
+                <input type="range" id="stormSeverity" name="stormSeverity" min="1" max="10"
+                    oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
+                <span id="ratingvalue">5</span>
+            </div>
+
+            <div>
+                <label for="stormRegion">Storm Region:</label>
+                <select name="stormRegion" id="stormRegion">
+                    <option value="" selected disabled>Select Region</option>
+                    <option value="Preston">Preston</option>
+                    <option value="Soda Springs">Soda Springs</option>
+                    <option value="Fish Haven">Fish Haven</option>
+                </select>
+            </div>
+
+            <div>
+                <span>Are you in danger?</span>
+                <div>
+                    <input type="radio" value="Yes" id="yes" name="danger"><label for="yes"> Yes</label>
+                    <input type="radio" value="Maybe" id="maybe" name="danger"><label for="maybe"> Maybe</label>
+                    <input type="radio" value="No" id="no" name="danger"><label for="no"> No</label>
+                </div>
+            </div>
+
+            <div>
+                <label for="comments" class="alignTop">Additional Comments:</label>
+                <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
             </div>
 
             <div>
                 <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
             </div>
         </form>
     </main>

@@ -62,3 +62,8 @@ for (let i = 1; i < 6; i++) {
 if (weekDayNum === 5){
     document.getElementById("pancake").removeAttribute("class", "hidden");
 }
+
+//storm severity
+function adjustRating(rating) {
+    document.getElementById("ratingvalue").innerHTML = rating;
+}

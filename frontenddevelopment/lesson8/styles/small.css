@@ -32,6 +32,10 @@ nav a:hover::before{
     font-weight: bolder;
 }
 
+.alignTop{
+    vertical-align: top;
+}
+
 article{
     max-width: 50%;
     margin-left: auto;
@@ -80,6 +84,10 @@ footer p{
 form{
     width: 500px;
     margin: 0 auto;
+}
+
+form div{
+    margin-top: 15px;
 }
 
 #gallery{
@@ -195,7 +203,7 @@ nav{
     display: none;
 }
 
-p, th, td, span, figcaption, label, input{
+p, th, td, span, figcaption, label, input, #stormRegion{
     font-family: 'Raleway', sans-serif;
 }
 
