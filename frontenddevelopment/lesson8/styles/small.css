@@ -221,6 +221,10 @@ td, th{
     text-align: center;
 }
 
+#thanks{
+    background-image: url("images/lake.jpg");
+}
+
 #weatherSummary{
     position: absolute;
     bottom: 20px;
