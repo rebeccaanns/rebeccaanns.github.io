@@ -81,15 +81,6 @@ footer p{
     text-align: center;
 }
 
-form{
-    width: 500px;
-    margin: 0 auto;
-}
-
-form div{
-    margin-top: 15px;
-}
-
 #gallery{
     display: grid;
     grid-template-columns: 1fr;
@@ -203,7 +194,7 @@ nav{
     display: none;
 }
 
-p, th, td, span, figcaption, label, input, #stormRegion{
+p, th, td, span, figcaption, label, input, #stormRegion, textarea{
     font-family: 'Raleway', sans-serif;
 }
 
@@ -400,3 +391,67 @@ td, th{
     -webkit-animation: 0.5s draw linear forwards;
     animation: 0.5s draw linear forwards;
   }
+
+/*FORM*/
+form{
+    width: 350px;
+    margin: 0 auto;
+}
+
+fieldset{
+    border-radius: 10px;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    margin-bottom: 20px;
+}
+
+legend{
+    background: #4ecdc4;
+    width: 100px;
+    height: 85px;
+    margin-left: 100px;
+    border-radius: 60px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+input, select{
+    width: 170px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: 1px solid;
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+}
+
+input:focus{
+    background-color: #ceeaf7;
+}
+
+form div{
+    margin-top: 15px;
+}
+
+input[type="submit"]{
+    margin-left: 70px;
+}
+
+#submit{
+    font-size: larger;
+    font-weight: bold;
+    background-color: #ceeaf7;
+    color: white;
+}
+
+#submit:hover
+{
+    background-color: #4ecdc4;   
+}
+
+input[type="radio"]{
+    width: 30px;
+    text-align: center;
+    vertical-align: text-bottom;
+}
