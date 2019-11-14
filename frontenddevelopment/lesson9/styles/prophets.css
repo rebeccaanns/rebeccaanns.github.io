@@ -1,0 +1,26 @@
+article{
+    background-color: lightblue;
+    margin: 5px;
+    padding: 0 auto;
+}
+
+img{
+    height: 250px;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 32.5em){
+    section{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 60em){
+    section{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
