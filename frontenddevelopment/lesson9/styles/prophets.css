@@ -1,11 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Open+Sans&display=swap');
+
 article{
-    background-color: lightblue;
+    background-color: powderblue;
     margin: 5px;
-    padding: 0 auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 img{
     height: 250px;
+}
+
+footer{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2{
+    color: navy;
+    text-align: center;
+    font-family: 'Noto Serif', serif;
 }
 
 section{
