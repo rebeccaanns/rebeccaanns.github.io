@@ -472,6 +472,7 @@ input[type="radio"]{
     display: inline-block;
     text-align: center;
     box-shadow: 4px 5px 12px grey;
+    border-radius: 7px;
 }
 
 #prestonMotto, #sodaMotto, #fishMotto{
@@ -485,8 +486,6 @@ input[type="radio"]{
     text-align: center;
     margin: 10px;
     border-radius: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 .home h1{
