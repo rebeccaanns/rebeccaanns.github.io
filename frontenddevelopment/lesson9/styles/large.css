@@ -1,5 +1,5 @@
 @media only screen and (min-width: 60em){
-    article img{
+    #prestonArticle img{
         margin-left: 15px;
     }
 
@@ -9,6 +9,10 @@
 
     .galleryPics:hover{
         box-shadow: 3px 3px 7px gray;
+    }
+
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr;
     }
     
     .headings h1{
