@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <title>Gallery</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/weatherIcon.png" alt="Icon for Just Beachy Weather" id="logo">
+        <section class="headings">
+            <h1>Just Beachy Weather</h1>
+            <p class="motto">Everything you need for your day at the beach</p>
+        </section>
+    </header>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="preston-10.html">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li><a href="stormCenter-10.html">Storm Center</a></li>
+            <li class="active"><a href="gallery-10.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Gallery</h2>
+        <h5 id="enlarge">Click to Enlarge Images</h5>
+        <section id="gallery">
+                <figure class="imageGridFigure">
+                    <img src="images/placeholder.jpg" data-src="images/1.jpg" alt="Photo by Mitchell Kmetz on Unsplash"
+                        class="galleryPics imageGridImg">
+                    <figcaption class="imageGridCaption">Photo by Mitchell Kmetz on Unsplash</figcaption>
+                </figure>
+
+                <figure class="imageGridFigure">
+                    <img src="images/placeholder.jpg" data-src="images/2.jpg" alt="Photo by Allie Smith on Unsplash"
+                        class="galleryPics imageGridImg">
+                    <figcaption class="imageGridCaption">Photo by Allie Smith on Unsplash</figcaption>
+                </figure>
+
+                <figure class="imageGridFigure">
+                    <img src="images/placeholder.jpg" data-src="images/3.jpg" alt="Photo by Alec baker on Unsplash"
+                        class="galleryPics imageGridImg">
+                    <figcaption class="imageGridCaption">Photo by Alec Baker on Unsplash</figcaption>
+                </figure>
+
+                <figure class="imageGridFigure">
+                    <img src="images/placeholder.jpg" data-src="images/4.jpg" alt="Photo by Karen Green on Unsplash"
+                        class="galleryPics imageGridImg">
+                    <figcaption class="imageGridCaption">Photo by Karen Green on Unsplash</figcaption>
+                </figure>
+
+                <figure class="imageGridFigure">
+                    <img src="images/placeholder.jpg" data-src="images/5.jpg"
+                        alt="Photo by Vidar Nordli-Mathisen on Unsplash" class="galleryPics imageGridImg">
+                    <figcaption class="imageGridCaption">Photo by Vidar Nordli-Mathisen on Unsplash</figcaption>
+                </figure>
+
+                <figure class="imageGridFigure">
+                    <img src="images/placeholder.jpg" data-src="images/6.jpg" alt="Photo by michael podger on Unsplash"
+                        class="galleryPics imageGridImg">
+                    <figcaption class="imageGridCaption">Photo by Michael Podger on Unsplash</figcaption>
+                </figure>
+
+                <figure class="imageGridFigure">
+                    <img src="images/placeholder.jpg" data-src="images/7.jpg" alt="Photo by Max LaRochelle on Unsplash"
+                        class="galleryPics imageGridImg">
+                    <figcaption class="imageGridCaption">Photo by Max LaRochelle on Unsplash</figcaption>
+                </figure>
+
+                <figure class="imageGridFigure">
+                    <img src="images/placeholder.jpg" data-src="images/8.jpg" alt="Photo by Johannes Plenio on Unsplash"
+                        class="galleryPics imageGridImg">
+                    <figcaption class="imageGridCaption">Photo by Johannes Plenio on Unsplash</figcaption>
+                </figure>
+
+                <figure class="imageGridFigure">
+                    <img src="images/placeholder.jpg" data-src="images/9.jpg" alt="Photo by Adam Chang on Unsplash"
+                        class="galleryPics imageGridImg">
+                    <figcaption class="imageGridCaption">Photo by Adam Chang on Unsplash</figcaption>
+                </figure>
+        </section>
+        <div class="modalOverlay closed" id="modalOverlay">
+            <i class="materialIcons modalOverlayClose">&times;</i>
+        </div>
+        <div class="modal closed" id="modal">
+            <img src="images/1.jpg" class="modalImg">
+        </div>
+    </main>
+
+    <footer>
+        <p> &copy; Just Beachy Weather | Attributions | Becca Stucki</p>
+        <p><span id="currentDate"></span></p>
+    </footer>
+    <script src="scripts/currentDate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="scripts/lazyload.js"></script>
+    <script src="scripts/modal.js"></script>
+</body>
+
+</html>

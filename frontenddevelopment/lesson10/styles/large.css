@@ -1,0 +1,33 @@
+@media only screen and (min-width: 60em){
+    #prestonArticle img{
+        margin-left: 15px;
+    }
+
+    #gallery{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .galleryPics:hover{
+        box-shadow: 3px 3px 7px gray;
+    }
+
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .headings h1{
+        font-size: 3.5rem;
+    }
+
+    #logo{
+        width: 160px;
+    }
+
+    .navigation a{
+        font-size: 1.15rem;
+    }
+
+    main h2{
+        font-size: 2rem;
+    }
+}
