@@ -56,15 +56,21 @@
             <div id="weatherSummary">
                 <h3 id="summary">Weather Summary</h3>
                 <p>
-                    <span>Current Temperature: </span>
+                    <span>Currently: </span>
                     <span id="currentTemp"></span>
                 </p>
-                <!-- <p>High: 76&deg;F</p> -->
+                <p>
+                    <span>High: </span>
+                    <span id="highTemp"></span>
+                </p>
                 <p>
                     <span>Windchill: </span>
                     <span id="windChill"></span>
                 </p>
-                <!-- <p>Humidity: 69%</p> -->
+                <p>
+                    <span>Humidity: </span>
+                    <span id="humidity"></span>
+                </p>
                 <p>
                     <span>Wind Speed: </span>
                     <span id="windSpeed"></span>
@@ -72,7 +78,7 @@
             </div>
         </section>
         <section id="fiveDay">
-            <h3>5 Day Forecast</h3>
+            <h2>5 Day Forecast</h2>
             <table>
                 <tr>
                     <th>Day</th>
@@ -84,11 +90,26 @@
                 </tr>
                 <tr>
                     <th>Forecast</th>
-                    <td id="temp1">68&deg;</td>
-                    <td id="temp2">65&deg;</td>
-                    <td id="temp3">72&deg;</td>
-                    <td id="temp4">75&deg;</td>
-                    <td id="temp5">71&deg;</td>
+                    <td>
+                        <img src="" alt="" id="icon1">
+                        <span id="temp1"></span>
+                    </td>
+                    <td>
+                        <img src="" alt="" id="icon2">
+                        <span id="temp2"></span>
+                    </td>
+                    <td>
+                        <img src="" alt="" id="icon3">
+                        <span id="temp3"></span>
+                    </td>
+                    <td>
+                        <img src="" alt="" id="icon4">
+                        <span id="temp4"></span>
+                    </td>
+                    <td>
+                        <img src="" alt="" id="icon5">
+                        <span id="temp5"></span>
+                    </td>
                 </tr>
             </table>
         </section>
