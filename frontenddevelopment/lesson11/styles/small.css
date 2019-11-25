@@ -1,0 +1,495 @@
+/* @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway&display=swap'); */
+
+a{
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+a::before{
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border: 4px solid #FFF;
+    transform: translateX(-50%) translateY(-50%) scale(.5);
+    border-radius: 5%;
+    background: transparent;
+    content: "";
+    opacity: 0;
+    transition: all .3s;
+    z-index: -1;
+}
+
+nav a:hover::before{
+    opacity: 1;
+    width: 200%;
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.active{
+    font-weight: bolder;
+}
+
+.alignTop{
+    vertical-align: top;
+}
+
+#prestonArticle{
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(78, 205, 196, 0.2);
+    padding: 15px 25px;
+    margin-bottom: 40px;
+}
+
+#prestonArticle h3{
+    text-align: center;
+}
+
+#prestonArticle h4{
+    margin-top: -7px;
+    text-align: center;
+}
+
+#contact{
+    background-color: rgba(204, 204, 204, .3);
+	padding: 25px;
+	text-align: center;
+}
+
+#enlarge{
+    text-align: center;
+}
+
+figcaption{
+    text-align: center;
+    font-size: small;
+}
+
+#fiveDay{
+    display: none;
+}
+
+footer{
+    background-color: #ceeaf7;
+    padding: 3px 0px;
+}
+
+footer p{
+    text-align: center;
+}
+
+#gallery{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.galleryPics{
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#group{
+    max-width: 235px;
+    box-shadow: 3px -2px 7px grey;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #98dfea;
+}
+
+header{
+    padding: 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4ecdc4;
+}
+
+.headings{
+    display: flex;
+    flex-direction: column;
+}
+
+.headings h1{
+    font-size: 1.6rem;
+    margin: 0px 0px 0px 17px;
+    text-align: center;
+    text-shadow: 3px 3px 7px gray;
+}
+
+#hero{
+    position: relative;
+}
+
+#heroPic{
+    max-width: 100%;
+}
+
+.hidden{
+    display: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+#logo{
+    width: 80px;
+}
+
+main h2{
+    text-align: center;
+}
+
+main section{
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#map{
+    display: none;
+}
+
+.motto{
+    font-style: italic;
+    letter-spacing: 1pt;
+    margin-left: 20px;
+    font-size: .9rem;
+    text-align: center;
+}
+
+nav{
+    margin: 0 auto;
+}
+
+.navigation{
+    width: 100%;
+    margin: 0 0 1em 0;
+    text-align: center;
+    padding: 0;
+    background-color: #ceeaf7;
+}
+
+.navigation a{
+    display: block;
+    padding: 0.75rem;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+    color: white;
+}
+
+.navigation li:first-child{
+    display: block;
+}
+
+.navigation li{
+    display: none;
+}
+
+p, th, td, span, figcaption, label, input, #stormRegion, textarea{
+    font-family: 'Raleway', sans-serif;
+}
+
+.responsive li{
+    display: block;
+}
+
+#summary{
+    color: white;
+    font-weight: bold;
+}
+
+td, th{
+    border: 1px solid black;
+    text-align: center;
+    padding: 9px;
+}
+
+#thanks{
+    background: url('../images/lake.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    height: 500px;
+    /* width: 100%; */
+    /* height: 100% */
+    margin-bottom: 20px;
+}
+
+#thanksText{
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 300px; 
+}
+
+#weatherSummary{
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+    background: rgba(78, 205, 196, 0.8);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*ICONS*/
+/* Wrapper */
+.icon-button {
+	background-color: white;
+	border-radius: 2.6rem;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1.3rem;
+	height: 2.6rem;
+	line-height: 2.6rem;
+	margin: 0 5px;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	width: 2.6rem;
+}
+
+/* Circle */
+.icon-button span {
+	border-radius: 0;
+	display: block;
+	height: 0;
+	left: 50%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 0;
+}
+.icon-button:hover span {
+	width: 2.6rem;
+	height: 2.6rem;
+	border-radius: 2.6rem;
+	margin: -1.3rem;
+}
+
+/* Icons */
+.icon-button i {
+	background: none;
+	color: white;
+	height: 2.6rem;
+	left: 0;
+	line-height: 2.6rem;
+	position: absolute;
+	top: 0;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 2.6rem;
+	z-index: 10;
+}
+
+.twitter span {
+	background-color: #4099ff;
+}
+.facebook span {
+	background-color: #3B5998;
+}
+.google-plus span {
+	background-color: #db5a3c;
+}
+.instagram span {
+	background-color: #517fa4;
+}
+.youtube span {
+	background-color: #bb0000;
+}
+.pinterest span {
+	background-color: #cb2027;
+}
+
+.icon-button .icon-twitter {
+	color: #4099ff;
+}
+.icon-button .icon-facebook {
+	color: #3B5998;
+}
+.icon-button .icon-google-plus {
+	color: #db5a3c;
+}
+.icon-button .fa-instagram {
+	color: #517fa4;
+}
+.icon-button .fa-youtube {
+	color: #bb0000;
+}
+.icon-button .fa-pinterest {
+	color: #cb2027;
+}
+
+.icon-button:hover .icon-twitter,
+.icon-button:hover .icon-facebook,
+.icon-button:hover .icon-google-plus,
+.icon-button:hover .fa-instagram,
+.icon-button:hover .fa-youtube,
+.icon-button:hover .fa-pinterest {
+	color: white;
+}
+
+/*PANCAKE*/
+.svg-wrapper{
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(50%);
+    width: 320px;
+}
+
+.shape{
+    fill: transparent;
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    stroke: #ff6b6b;
+}
+
+.pancakeText{
+    font-size: 13px;
+    letter-spacing: 2px;
+    line-height: 20px;
+    position: relative;
+    top: -20px;
+    text-align: center;
+    margin: 0 auto;
+    width: 320px;
+}
+
+@keyframes draw {
+    0% {
+      stroke-dasharray: 140 540;
+      stroke-dashoffset: -474;
+      stroke-width: 8px;
+    }
+    100% {
+      stroke-dasharray: 760;
+      stroke-dashoffset: 0;
+      stroke-width: 2px;
+    }
+  }
+  
+  .svg-wrapper:hover .shape {
+    -webkit-animation: 0.5s draw linear forwards;
+    animation: 0.5s draw linear forwards;
+  }
+
+/*FORM*/
+form{
+    width: 350px;
+    margin: 0 auto;
+}
+
+fieldset{
+    border-radius: 10px;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    margin-bottom: 20px;
+}
+
+legend{
+    background: #4ecdc4;
+    width: 100px;
+    height: 85px;
+    margin-left: 100px;
+    border-radius: 60px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+input, select{
+    width: 170px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: 1px solid;
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+}
+
+input:focus{
+    background-color: #ceeaf7;
+}
+
+form div{
+    margin-top: 15px;
+}
+
+input[type="submit"]{
+    margin-left: 70px;
+}
+
+#submit{
+    font-size: larger;
+    font-weight: bold;
+    background-color: #ceeaf7;
+    color: white;
+}
+
+#submit:hover
+{
+    background-color: #4ecdc4;   
+}
+
+input[type="radio"]{
+    width: 30px;
+    text-align: center;
+    vertical-align: text-bottom;
+}
+
+/*HOME PAGE*/
+.homeImgs{
+    position: relative;
+    width: 350px;
+    height: 220px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 4px 5px 12px grey;
+    border-radius: 7px;
+}
+
+#prestonMotto, #sodaMotto, #fishMotto{
+    font-size: medium;
+    font-style: italic;
+    color: white;
+}
+
+.home{
+    background-color: #4ecdc4;
+    text-align: center;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+.home h1{
+    text-shadow: 2px 2px 5px gray;
+}

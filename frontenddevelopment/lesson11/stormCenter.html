@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <title>Storm Center</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/weatherIcon.png" alt="Icon for Just Beachy Weather" id="logo">
+        <section class="headings">
+            <h1>Just Beachy Weather</h1>
+            <p class="motto">Everything you need for your day at the beach</p>
+        </section>
+    </header>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="preston.html">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li class="active"><a href="stormCenter.html">Storm Center</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main id="wrap">
+        <form action="thanks.html" method="GET">
+            <fieldset>
+                <legend><h3>Storm Center</h3></legend>
+                <div>
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required pattern="[A-Za-z ] {5, }">
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="user@email.com">
+                </div>
+
+                <div>
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                </div>
+
+                <div>
+                    <label for="zipCode">Zip Code:</label>
+                    <input type="number" id="zipCode" name="zipCode" required>
+                </div>
+
+                <div>
+                    <label for="stormDate">Storm Date:</label>
+                    <input type="date" id="stormDate" name="stormDate">
+                </div>
+
+                <div>
+                    <label for="stormType">Storm Type:</label>
+                    <input list="stormType">
+
+                    <datalist id="stormType">
+                        <option value="Flash Flood"></option>
+                        <option value="Hail"></option>
+                        <option value="Hurricane"></option>
+                        <option value="Thunderstorm"></option>
+                        <option value="Tornado"></option>
+                    </datalist>
+                </div>
+
+                <div>
+                    <label for="stormSeverity">Storm Severity:</label>
+                    <input type="range" id="stormSeverity" name="stormSeverity" min="1" max="10"
+                        oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
+                    <span id="ratingvalue">5</span>
+                </div>
+
+                <div>
+                    <label for="stormRegion">Storm Region:</label>
+                    <select name="stormRegion" id="stormRegion">
+                        <option value="" selected disabled>Select Region</option>
+                        <option value="Preston">Preston</option>
+                        <option value="Soda Springs">Soda Springs</option>
+                        <option value="Fish Haven">Fish Haven</option>
+                    </select>
+                </div>
+
+                <div>
+                    <span>Are you in danger?</span>
+                    <div>
+                        <input type="radio" value="Yes" id="yes" name="danger"><label for="yes"> Yes</label>
+                        <input type="radio" value="Maybe" id="maybe" name="danger"><label for="maybe"> Maybe</label>
+                        <input type="radio" value="No" id="no" name="danger"><label for="no"> No</label>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="comments" class="alignTop">Additional Comments:</label>
+                    <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+                </div>
+
+                <div>
+                    <input type="submit" value="Submit" id="submit">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <p> &copy; Just Beachy Weather | Attributions | Becca Stucki</p>
+        <p><span id="currentDate"></span></p>
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+</body>
+
+</html>
