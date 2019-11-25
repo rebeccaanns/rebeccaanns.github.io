@@ -43,81 +43,52 @@ function toggleMenu() {
     document.getElementsByClassName("navigation")[0].classList.toggle("responsive");
 }
 
-//5 day forecast
-let currentDay = weekDayNum;
+function getFiveDay(cityID) {
+    //API for 5 day forecast
+    const apiForecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityID + "&appid=e22134d7e2f991aa104d13141ea859d1&units=imperial";
 
-for (let i = 1; i < 6; i++) {
-    currentDay++;
+    fetch(apiForecastURL)
+        .then((response) => response.json())
+        .then((forecasts) => {
+            //DEBUG
+            console.log(forecasts);
 
-    if (currentDay > 6) {
-        currentDay = 0;
-    }
+            //loop through results
+            forecasts.list.forEach(
+                (forecast) => {
+                    let hourString = "18:00:00";
+                    let counter = 1;
 
-    const element = document.getElementById(`day${i}`);
+                    forecasts.list.forEach(
+                        (forecast) => {
+                            if (forecast.dt_txt.includes(hourString)) {
+                                // console.log(forecast.main.temp);
 
-    element.innerHTML = daysOfWeek[currentDay];
-}
+                                //temp
+                                const temp = document.getElementById(`temp${counter}`);
+                                temp.innerHTML = Math.round(forecast.main.temp_max) + "&deg;";
 
-//API for 5 day forecast
-const apiForecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=e22134d7e2f991aa104d13141ea859d1&units=imperial";
+                                // icons
+                                let apiIcon = forecast.weather[0].icon;
+                                let currentImg = "https://openweathermap.org/img/w/" + apiIcon + ".png";
+                                const description = forecast.weather[0].description;
 
-fetch(apiForecastURL)
-    .then((response) => response.json())
-    .then((forecasts) => {
-        //DEBUG
-        console.log(forecasts);
+                                //day
+                                let nextDate = new Date(forecast.dt_txt);
+                                const day = document.getElementById(`day${counter}`);
+                                day.innerHTML = daysOfWeek[nextDate.getDay()];
 
-        //loop through results
-        forecasts.list.forEach(
-            (forecast) => {
-                let nextDate = new Date();
-                nextDate.setDate(nextDate.getDate() + 1);
-                let dateString = getDateString(nextDate);
-                let hourString = "18:00:00";
-                let counter = 1;
+                                document.getElementById(`icon${counter}`).setAttribute('src', currentImg);
+                                document.getElementById(`icon${counter}`).setAttribute('alt', description);
 
-                forecasts.list.forEach(
-                    (forecast) => {
-                        if (forecast.dt_txt.includes(dateString) && forecast.dt_txt.includes(hourString)) {
-                            // console.log(forecast.main.temp);
-
-                            const temp = document.getElementById(`temp${counter}`);
-                            temp.innerHTML = Math.round(forecast.main.temp) + "&deg;";
-
-                            // const icon = document.getElementById(`icon${counter}`);
-                            let apiIcon = forecast.weather[0].icon;
-                            let currentImg = "https://openweathermap.org/img/w/" + apiIcon + ".png";
-                            const description  = forecast.weather[0].description;
-
-                            document.getElementById(`icon${counter}`).setAttribute('src', currentImg);
-                            document.getElementById(`icon${counter}`).setAttribute('alt', description);
-                            // icon.innerHTML = currentImg;
-
-                            counter++;
-                            nextDate.setDate(nextDate.getDate() + 1);
-                            dateString = getDateString(nextDate);
+                                counter++;
+                            }
                         }
-                    }
-                )
-            }
-        );
-    });
-
-function getDateString(date) {
-    let dateString = date.getFullYear() + '-' +
-        (date.getMonth() + 1) + '-' +
-        date.getDate();
-        
-    return dateString;
+                    )
+                }
+            );
+        });
 }
-
-// function icon() {
-//     let currentIcon = currentWeather.weather[0].icon;
-//         let currentImg = "https://openweathermap.org/img/w/" + currentIcon + ".png";
-//         document.querySelector("#imagesrc").textContent = currentImg;
-//         document.querySelector("#weather-icon").setAttribute('src', currentImg);
-//         document.querySelector("#weather-icon").setAttribute("alt", currentWeather.weather[0].main);
-// }
 
 //pancake
 if (weekDayNum === 5) {
