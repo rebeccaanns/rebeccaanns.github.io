@@ -1,9 +1,9 @@
 @media only screen and (min-width: 32.5em){
-    #prestonArticle, #prestonArticle h3, #prestonArticle h4{
+    #pageArticle, #pageArticle h3{
         text-align: right;
     }
     
-    #prestonArticle img{
+    #pageArticle img{
         float: right;
         margin-left: 8px;
     }
@@ -30,7 +30,7 @@
         width: 110px;
     }
 
-    #map{
+    .map{
         display: flex;
         position: relative;
         margin-left: auto;

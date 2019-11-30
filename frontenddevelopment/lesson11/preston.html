@@ -49,8 +49,7 @@
             </div>
         </section>
         <section id="hero">
-            <img src="images/small.jpg"
-                 srcset="images/large.jpg 1200w,
+            <img src="images/small.jpg" srcset="images/large.jpg 1200w,
                         images/medium.jpg 800w,
                         images/small.jpg 400w" id="heroPic" alt="Image of Preston, Idaho by Allie Smith">
             <div id="weatherSummary">
@@ -113,18 +112,41 @@
                 </tr>
             </table>
         </section>
-        <section>
-            <article id="prestonArticle">
-                <img src="images/group.jpg" alt="Group of people sitting on a bench" id="group">
-                <h3>Weather Article</h3>
-                <h4>By: someone</h4>
-                <p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced
-                    by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex!</p>
 
-                <p>Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl
-                    quack. Quick wafting zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim. How quickly daft
-                    jumping zebras vex. Two driven jocks help fax my big quiz. Quick,
-                    Baz, get my woven flax jodhpurs! "Now fax quiz Jack! " my brave</p>
+        <section id="wrapper">
+            <section class="eventSection">
+                <h2>Upcoming Events</h2>
+                <div class="events">
+                    <p id="prestonEventOne"></p>
+                    <p id="prestonEventTwo"></p>
+                    <p id="prestonEventThree"></p>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <article id="pageArticle">
+                <img src="images/group.jpg" alt="Group of people sitting on a bench" id="group">
+                <h3>Beautiful Weather, Hot Griddlecakes</h3>
+                <p>Preston City Park was chock full of local residents ready to indulge their hunger for breakfast
+                    anytime during the Preston Kiwanis Club’s 62nd Pancake Supper.</p>
+
+                <p>The supper serves as the main fundraiser for the Kiwanis Club, which works to help the parish’s young
+                    people through several projects like Harvey the Rabbit and assisting the Preston Boys and Girls
+                    Club.</p>
+
+                <p>Volunteers were up since 6 A.M. Thursday preparing sausages and pancakes to be doled out to everyone
+                    who had received a ticket for the supper. A long car line that started at the boat landing side of
+                    the park and extended to the Sugar Cane Festival Building was waiting to pick up to-go helpings.</p>
+
+                <p>For those who wanted a more social experience, a dine-in option was available at the Cyr-Gates
+                    Community Center, where volunteers were cooking pancakes and members of the Key Club were organizing
+                    the food.</p>
+
+                <p>This year’s pancake chairman, Tyler Cestia, said the event was going great, and that it fundamentally
+                    serves a good cause for Preston Parish.</p>
+
+                <p>“It’s been great, the weather’s nice and it’s a great time for the kids,” Cestia said.</p>
             </article>
         </section>
         <section id="contact">
@@ -152,10 +174,11 @@
         <p><span id="currentDate"></span></p>
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47365.773853446575!2d-111.91534446880078!3d42.09974162637902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C%20ID%2083263!5e0!3m2!1sen!2sus!4v1571243673415!5m2!1sen!2sus"
-            height="150" width="150" frameborder="0" style="border:0;" allowfullscreen="" id="map"></iframe>
+            height="150" width="150" frameborder="0" style="border:0;" allowfullscreen="" class="map"></iframe>
     </footer>
     <script src="scripts/main.js"></script>
     <script src="scripts/windchill.js"></script>
+    <script src="scripts/prestonEvents.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 </body>
 

@@ -43,6 +43,20 @@ function toggleMenu() {
     document.getElementsByClassName("navigation")[0].classList.toggle("responsive");
 }
 
+let currentDay = weekDayNum;
+
+for (let i = 1; i < 6; i++) {
+    currentDay++;
+
+    if (currentDay > 6) {
+        currentDay = 0;
+    }
+
+    const element = document.getElementById(`day${i}`);
+
+    element.innerHTML = daysOfWeek[currentDay];
+}
+
 function getFiveDay(cityID) {
     //API for 5 day forecast
     const apiForecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityID + "&appid=e22134d7e2f991aa104d13141ea859d1&units=imperial";
@@ -74,7 +88,7 @@ function getFiveDay(cityID) {
                                 const description = forecast.weather[0].description;
 
                                 //day
-                                let nextDate = new Date(forecast.dt_txt);
+                                let nextDate = new Date(forecast.dt_txt.replace(' ', 'T'));
                                 const day = document.getElementById(`day${counter}`);
                                 day.innerHTML = daysOfWeek[nextDate.getDay()];
 
