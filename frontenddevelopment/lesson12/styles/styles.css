@@ -436,7 +436,110 @@ template {
   display: none;
 }
 
-@media only screen and (min-width: 32.5em) and (min-width: 560px) {
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* body rules */
+body {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+header {
+  background-color: #e4c517;
+  padding: 1rem 2%;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+nav {
+  background-color: #111;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav li.active {
+  background-color: #333;
+}
+
+nav a {
+  display: block;
+  padding: .8rem 0;
+  /*44px min*/
+  color: #eee;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #444;
+}
+
+main {
+  display: block;
+  padding: 1rem 2%;
+}
+
+main h1 {
+  color: #e4c517;
+  font-weight: 700;
+}
+
+main figure img {
+  width: 100%;
+}
+
+main figure {
+  margin: 0;
+  width: 100%;
+}
+
+main figcaption {
+  text-align: center;
+  font-size: .8rem;
+}
+
+footer {
+  background-color: #e4c517;
+  text-align: center;
+  padding: 1rem 2%;
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width: 560px) {
   nav li {
     width: 25%;
     float: left;
@@ -456,12 +559,11 @@ template {
   }
 }
 
-@media only screen and (min-width: 32.5em) {
-  /* end of media query */
-}
-
-@media only screen and (min-width: 60em) and (min-width: 1028px) {
-  header, nav, main, footer {
+@media only screen and (min-width: 1028px) {
+  header,
+  nav,
+  main,
+  footer {
     max-width: 1200px;
     margin: auto;
   }
@@ -481,9 +583,5 @@ template {
     -webkit-column-count: 3;
             column-count: 3;
   }
-}
-
-@media only screen and (min-width: 60em) {
-  /* end of media query */
 }
 /*# sourceMappingURL=styles.css.map */
