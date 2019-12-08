@@ -416,6 +416,10 @@ p, a {
     border-bottom: 2px solid transparent;
     line-height: 1.6em;
   }
+  .navigation li a:hover {
+    border-bottom: 2px solid #9590A8;
+    color: #68A691;
+  }
   .navigation .lineLeft {
     position: relative;
   }
@@ -426,7 +430,8 @@ p, a {
     margin-top: -.2em;
     height: .2em;
     border-bottom: 2px solid #9590A8;
-    width: 92em;
+    width: 7em;
+    margin-left: -125px;
   }
   .navigation .lineRight {
     position: relative;

@@ -20,6 +20,10 @@ nav{
         border-bottom: 2px solid transparent;
         line-height: 1.6em;
     }
+    li a:hover{
+        border-bottom: 2px solid $mainOne;
+        color: $mainTwo;
+    }
     .lineLeft{
         position: relative;
         &::before{
@@ -29,7 +33,8 @@ nav{
             margin-top: -.2em;
             height: .2em;
             border-bottom: 2px solid $mainOne;
-            width: 92em;
+            width: 7em;
+            margin-left: -125px;
         }
     }
     .lineRight{
