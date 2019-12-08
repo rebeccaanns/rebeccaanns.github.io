@@ -1,1 +1,49 @@
 @import 'variables';
+
+//ELEMENTS
+nav{
+    margin-top: -60px;
+}
+//CLASSES
+.navigation{
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    li:first-child{
+        display: none;
+    }
+    li{
+        display: inline-block;
+        padding: 0 30px;
+    }
+    li a{
+        border-bottom: 2px solid transparent;
+        line-height: 1.6em;
+    }
+    .lineLeft{
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 50%; 
+            margin-top: -.2em;
+            height: .2em;
+            border-bottom: 2px solid $mainOne;
+            width: 92em;
+        }
+    }
+    .lineRight{
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 50%; 
+            margin-top: -.2em;
+            height: .2em;
+            border-bottom: 2px solid $mainOne;
+            width: 200em;
+            margin-left: 92px;
+        }
+    }
+}
+//IDS

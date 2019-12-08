@@ -343,14 +343,103 @@ template {
 }
 
 /* ELEMENTS */
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
 }
 
-p {
+p, a {
   font-family: "Lato", sans-serif;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 /* CLASSES */
+.headImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.navigation {
+  width: 80%;
+  margin-top: -10px;
+}
+
+.navigation a {
+  display: block;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.navigation li:first-child {
+  display: inline-block;
+}
+
+.navigation li {
+  display: none;
+}
+
+.wrapper {
+  background-color: white;
+  margin: 50px;
+  border: 2px solid #9590A8;
+  text-align: center;
+}
+
 /* ID'S */
+@media only screen and (min-width: 32.5em) {
+  nav {
+    margin-top: -60px;
+  }
+  .navigation {
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+  }
+  .navigation li:first-child {
+    display: none;
+  }
+  .navigation li {
+    display: inline-block;
+    padding: 0 30px;
+  }
+  .navigation li a {
+    border-bottom: 2px solid transparent;
+    line-height: 1.6em;
+  }
+  .navigation .lineLeft {
+    position: relative;
+  }
+  .navigation .lineLeft::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -.2em;
+    height: .2em;
+    border-bottom: 2px solid #9590A8;
+    width: 92em;
+  }
+  .navigation .lineRight {
+    position: relative;
+  }
+  .navigation .lineRight::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -.2em;
+    height: .2em;
+    border-bottom: 2px solid #9590A8;
+    width: 200em;
+    margin-left: 92px;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

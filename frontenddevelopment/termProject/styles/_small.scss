@@ -2,14 +2,52 @@
 @import 'variables';
 
 /* ELEMENTS */
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: $background-color;
+}
+
 h1, h2, h3, h4, h5, h6{
     font-family: $headFont;
 }
 
-p{
+p, a{
     font-family: $mainFont;
+    color: $textColor;
 }
 
 /* CLASSES */
+.headImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 
+.navigation{
+    width: 80%;
+    margin-top: -10px;
+    a{
+        display: block;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+    }
+    li:first-child{
+        display: inline-block;
+    }
+    li{
+        display: none;
+    }
+}
+
+.wrapper{
+    background-color: white;
+    margin: 50px;
+    border: 2px solid $mainOne;
+    text-align: center;
+}
 /* ID'S */
