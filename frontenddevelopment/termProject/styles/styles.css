@@ -6,6 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://fonts.googleapis.com/css?family=Lato|Playfair+Display:700&display=swap");
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 html {
   line-height: 1.15;
   /* 1 */
@@ -347,6 +348,11 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  border-bottom: 2px solid #9590A8;
+  color: #68A691;
+}
+
 body {
   background-color: #f7f7f7;
 }
@@ -361,6 +367,11 @@ p, a {
 }
 
 /* CLASSES */
+.fade {
+  -webkit-animation: fade 1.2s;
+          animation: fade 1.2s;
+}
+
 .headImg {
   display: block;
   margin-left: auto;
@@ -388,6 +399,104 @@ p, a {
   display: none;
 }
 
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-size: 18px;
+  -webkit-transition: .6s ease;
+  transition: .6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.prev:hover, .next:hover {
+  border-bottom: 0px transparent;
+  color: white;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.slideWrapper {
+  max-width: 250px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slideWrapper img {
+  max-width: 250px;
+}
+
+.slides {
+  display: none;
+}
+
+.socialMedia {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 3%;
+}
+
+.socialMedia a {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  position: relative;
+  margin: 0 5px;
+  text-align: center;
+  display: inline-block;
+  margin-left: 15px;
+  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+}
+
+.socialMedia a i {
+  position: relative;
+  top: 2px;
+  left: 1px;
+}
+
+.socialMedia a::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -1.5px;
+  border: 1px solid #DAD2D8;
+  border-radius: 2px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  padding: 1px;
+}
+
+.socialMedia a:hover {
+  color: white;
+  border-bottom: 0px transparent;
+}
+
+.socialMedia a:hover::before {
+  background: #DAD2D8;
+}
+
 .wrapper {
   background-color: white;
   margin: 50px;
@@ -396,9 +505,31 @@ p, a {
 }
 
 /* ID'S */
+/* KEYFRAMES */
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media only screen and (min-width: 32.5em) {
   nav {
     margin-top: -60px;
+  }
+  .active {
+    color: #DAD2D8;
+    text-transform: uppercase;
   }
   .navigation {
     display: inline-block;
@@ -431,7 +562,7 @@ p, a {
     height: .2em;
     border-bottom: 2px solid #9590A8;
     width: 7em;
-    margin-left: -125px;
+    margin-left: -139px;
   }
   .navigation .lineRight {
     position: relative;
@@ -443,8 +574,16 @@ p, a {
     margin-top: -.2em;
     height: .2em;
     border-bottom: 2px solid #9590A8;
-    width: 200em;
-    margin-left: 92px;
+    width: 7em;
+    margin-left: 108px;
+  }
+  .slideWrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .slideWrapper img {
+    max-width: 500px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

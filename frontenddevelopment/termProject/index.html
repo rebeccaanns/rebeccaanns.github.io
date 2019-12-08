@@ -19,7 +19,7 @@
         <nav>
             <ul class="navigation">
                 <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a></li>
-                <li class="active"><a href="index.html" class="lineLeft">Home</a></li>
+                <li><a href="index.html" class="lineLeft active">Home</a></li>
                 <li><a href="temple.html">Temples</a></li>
                 <li><a href="reservation.html">Reservations</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -28,11 +28,35 @@
         </nav>
 
         <main>
-
+            <section>
+                <div class="slideWrapper">
+                    <div class="slides fade">
+                        <img src="images/apartment.jpg" alt="Travel photo created by katemangostar - www.freepik.com">
+                    </div>
+                    <div class="slides fade">
+                        <img src="images/lobby.jpg" alt="Design photo created by jcomp - www.freepik.com">
+                    </div>
+                    <div class="slides fade">
+                        <img src="images/livingRoom.jpg" alt="Light photo created by mrsiraphol - www.freepik.com<">
+                    </div>
+                    <div class="slides fade">
+                        <img src="images/breakfast.jpg" alt="Background photo created by jannoon028 - www.freepik.com">
+                    </div>
+                    <div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer>
-
+            <div class="socialMedia">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+            <p>&copy; Temple Inn & Suites | <a href="resources.html">Resources</a></p>
         </footer>
         <script src="scripts/main.js"></script>
     </div>

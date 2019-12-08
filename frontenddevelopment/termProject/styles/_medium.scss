@@ -5,6 +5,11 @@ nav{
     margin-top: -60px;
 }
 //CLASSES
+.active{
+    color: $accentOne;
+    text-transform: uppercase;
+}
+
 .navigation{
     display: inline-block;
     overflow: hidden;
@@ -34,7 +39,7 @@ nav{
             height: .2em;
             border-bottom: 2px solid $mainOne;
             width: 7em;
-            margin-left: -125px;
+            margin-left: -139px;
         }
     }
     .lineRight{
@@ -46,9 +51,18 @@ nav{
             margin-top: -.2em;
             height: .2em;
             border-bottom: 2px solid $mainOne;
-            width: 200em;
-            margin-left: 92px;
+            width: 7em;
+            margin-left: 108px;
         }
+    }
+}
+
+.slideWrapper{
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    img{
+        max-width: 500px;
     }
 }
 //IDS
