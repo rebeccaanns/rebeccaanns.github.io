@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promises</title>
+    <!-- Brother Hayes came in to teach -->
+    <script>
+        function simplePromise(){
+            return new Promise(function(resolve, reject){
+                setTimeout(function(){
+                    resolve("Hello World");
+                },20);
+                //throw Error("opps");
+                //resolve("Hello World");
+                reject("Failed Here");
+            })
+        }
+
+        let promise = simplePromise();
+        console.log(promise);
+
+        promise.then(function(value){
+            console.log(value);
+            console.log(promise);
+        }).catch(function(e){
+            console.log(e);
+            console.log(promise);
+        });
+
+        async function getWeather(latitude, longitude){
+            const addr = "https://api.weather.gov/points/" + latitude + "," + longitude + "/forecast";
+            const response = await fetch(addr);
+
+            if(response.status == 200){
+                return response.json();
+            }
+            else {
+                throw new Error("Error page not found: " + response.status);
+            }
+        }
+        const lat = "43.60";
+        const lng = "-111.8302";
+
+        getWeather(lat, lng)
+            .then(console.log)
+            .catch(console.log);
+
+        async function getIP(address){
+            const key = "XnuAdWmZOEBTl2syIeW45AeszL2TPoBw";
+            const addr = "http://open.mapquestapi.com/geocoding/v1/address?key=" + key + "&location=" + address;
+            const response = await fetch(addr);
+
+            if(response.status == 200){
+                return response.json();
+            }
+            else{
+                throw new Error("Error page not found: " + response.status);
+            }
+        }
+
+        const address = "Rexburg, Idaho";
+        getIP(address)
+                .then(console.log)
+                .catch(console.log);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

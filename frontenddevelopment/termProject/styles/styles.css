@@ -367,6 +367,15 @@ p, a {
 }
 
 /* CLASSES */
+.contactLetter {
+  line-height: 1.5rem;
+  border: 0;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 .fade {
   -webkit-animation: fade 1.2s;
           animation: fade 1.2s;
@@ -377,6 +386,17 @@ p, a {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+.letterText {
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='24'><rect fill='rgb(229, 225, 187)' x='0' y='23' width='10' height='1'/></svg>");
+}
+
+.messageInfo {
+  width: 15%;
+  margin-bottom: 1rem;
+  text-align: right;
 }
 
 .navigation {
@@ -430,6 +450,10 @@ p, a {
 .prev {
   left: 0;
   border-radius: 3px 0 0 3px;
+}
+
+.responsive li {
+  display: block;
 }
 
 .slideWrapper {
@@ -505,6 +529,32 @@ p, a {
 }
 
 /* ID'S */
+#enter {
+  display: block;
+  -webkit-transition: opacity 0.33s;
+  transition: opacity 0.33s;
+}
+
+#message {
+  width: 30%;
+  height: 8rem;
+  resize: none;
+}
+
+#send {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: #68A691;
+  color: white;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+#send:hover, #send:focus {
+  outline: none;
+  opacity: .85;
+}
+
 /* KEYFRAMES */
 @-webkit-keyframes fade {
   from {
