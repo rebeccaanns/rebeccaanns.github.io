@@ -31,3 +31,10 @@ function showSlides(n){
 
     slides[slideIndex-1].style.display = "block";
 }
+
+//CONTACT FORM
+function addClass() {
+    document.body.classList.add("sent");
+}
+
+letterMessage.addEventListener("click", addClass());

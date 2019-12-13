@@ -1,10 +1,11 @@
-{
+[{
     "temples": [
     {
         "templeName": "Rexburg Idaho Temple",
         "templeLocation": "Rexburg, Idaho, United States",
         "address": "750 S 2nd E",
         "phone": "(1) 208-656-0880",
+        "email" : "REXBU-OFF@ldschurch.org",
         "services": [
             "Clothing rental available",
             "No cafeteria available",
@@ -42,6 +43,7 @@
         "templeLocation": "Campinas, Sao Paulo, Brazil",
         "address": "Rua James Esdras Faust, 400 Barrio Notre Dame",
         "phone": "(55) 19-2102-5800",
+        "email" : "CAMPI-OFF@ldschurch.org",
         "services": [
             "Clothing rental available",
             "Cafeteria available",
@@ -78,6 +80,7 @@
         "templeLocation": "Le Chesnay, France",
         "address": "46 Boulevard Saint Antoine",
         "phone": "(33) 970-73-70-00",
+        "email": "PARIS-OFF@ldschurch.org",
         "services": [
             "No clothing rental available",
             "No cafeteria available",
@@ -112,6 +115,7 @@
         "templeLocation": "Kailua-Kona, Hawaii, United States",
         "address": "75-230 Kalani St",
         "phone": "(1) 808-331-8504",
+        "email": "KONA-OFF@ldschurch.org",
         "services": [
             "No clothing rental available",
             "No cafeteria available",
@@ -143,4 +147,4 @@
         ]
     }
 ]
-}
+}]
