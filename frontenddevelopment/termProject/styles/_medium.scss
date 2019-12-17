@@ -83,3 +83,19 @@ nav{
 #letter{
     width: 50rem;
 }
+
+#reception, #receptionFood, #receptionSetUp, #missCouple, #missRoom{
+    display: flex;
+    flex-flow: row wrap;
+    div{
+        width: 58%;
+        flex: 1 0 15em;
+        margin: 3em;
+    }
+    img{
+        width: 100%;
+    }
+    h2{
+        text-align: left;
+    }
+}

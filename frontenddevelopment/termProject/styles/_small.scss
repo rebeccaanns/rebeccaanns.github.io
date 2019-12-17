@@ -371,10 +371,54 @@ p, a, li, button, div, legend, input, textarea{
     perspective: 60rem;
 }
 
+#makeAReservation{
+    button{
+        display: block;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border-color: transparent;
+    background-color: $mainTwo;
+    font-size: 1.2rem;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    a{
+        color: white;
+    }
+    }
+    article{
+        background-color: $mainOne;
+        width: 50%;
+        text-align: center;
+        vertical-align: middle;
+        padding: 13px;
+        margin: 0 auto;
+        margin-top: 40px;
+        img{
+            width: 50%;
+        }
+    }
+    h2{
+        color: white;
+    }
+}
+
 #message{
     width: 50%;
     height: 8rem;
     resize: none;
+}
+
+#reception, #receptionFood, #receptionSetUp, #missCouple, #missRoom{
+    div{
+        margin: 3em;
+    }
+    img{
+        width: 100%;
+    }
+    h2{
+        text-align: center;
+    }
 }
 
 #send{
@@ -420,6 +464,12 @@ p, a, li, button, div, legend, input, textarea{
 #specialAccomodations{
     width: 17rem;
     text-align: center;
+}
+
+#story{
+    width: 70%;
+    margin: 0 auto;
+    text-align: right;
 }
 
 #thanksSlides{

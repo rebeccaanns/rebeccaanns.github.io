@@ -764,10 +764,56 @@ p, a, li, button, div, legend, input, textarea {
           perspective: 60rem;
 }
 
+#makeAReservation button {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border-color: transparent;
+  background-color: #68A691;
+  font-size: 1.2rem;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+#makeAReservation button a {
+  color: white;
+}
+
+#makeAReservation article {
+  background-color: #9590A8;
+  width: 50%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 13px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+#makeAReservation article img {
+  width: 50%;
+}
+
+#makeAReservation h2 {
+  color: white;
+}
+
 #message {
   width: 50%;
   height: 8rem;
   resize: none;
+}
+
+#reception div, #receptionFood div, #receptionSetUp div, #missCouple div, #missRoom div {
+  margin: 3em;
+}
+
+#reception img, #receptionFood img, #receptionSetUp img, #missCouple img, #missRoom img {
+  width: 100%;
+}
+
+#reception h2, #receptionFood h2, #receptionSetUp h2, #missCouple h2, #missRoom h2 {
+  text-align: center;
 }
 
 #send {
@@ -819,6 +865,12 @@ p, a, li, button, div, legend, input, textarea {
 #specialAccomodations {
   width: 17rem;
   text-align: center;
+}
+
+#story {
+  width: 70%;
+  margin: 0 auto;
+  text-align: right;
 }
 
 #thanksSlides {
@@ -921,6 +973,28 @@ p, a, li, button, div, legend, input, textarea {
   }
   #letter {
     width: 50rem;
+  }
+  #reception, #receptionFood, #receptionSetUp, #missCouple, #missRoom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  #reception div, #receptionFood div, #receptionSetUp div, #missCouple div, #missRoom div {
+    width: 58%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 15em;
+            flex: 1 0 15em;
+    margin: 3em;
+  }
+  #reception img, #receptionFood img, #receptionSetUp img, #missCouple img, #missRoom img {
+    width: 100%;
+  }
+  #reception h2, #receptionFood h2, #receptionSetUp h2, #missCouple h2, #missRoom h2 {
+    text-align: left;
   }
 }
 
