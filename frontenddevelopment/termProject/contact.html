@@ -29,33 +29,35 @@
         </nav>
 
         <main>
-            <section id="contactSection">
-                <p id="enter">Enter message and click "Send"</p>
-                <div id="contactWrapper cWrap">
-                    <article id="letter">
-                        <div class="side">
-                            <h1>Contact Us</h1>
-                            <p>
-                                <textarea placeholder="Your message" class="contactLetter letterText" id="message"></textarea>
-                            </p>
-                        </div>
-                        <div class="side">
-                            <p>
-                                <input type="text" placeholder="Your name" class="contactLetter letterText messageInfo">
-                            </p>
-                            <p>
-                                <input type="email" placeholder="Your email" class="contactLetter letterText messageInfo">
-                            </p>
-                            <p>
-                                <button id="send" class="contactLetter">Send</button>
-                            </p>
-                        </div>
-                    </article>
-                    <div class="envelope front"></div>
-                    <div class="envelope back"></div>
-                </div>
-                <p id="letterMessage">Thank you for your message!</p>
-            </section>
+            <form action="thanks2.html" method="GET">
+                <section id="contactSection">
+                    <p id="enter">Enter message and click "Send"</p>
+                    <div id="contactWrapper cWrap">
+                        <article id="letter">
+                            <div class="side">
+                                <h1 class="whiteHead">Contact Us</h1>
+                                <p>
+                                    <textarea placeholder="Your message" class="contactLetter letterText"
+                                        id="message"></textarea>
+                                </p>
+                            </div>
+                            <div class="side">
+                                <p>
+                                    <input type="text" placeholder="Your name"
+                                        class="contactLetter letterText messageInfo">
+                                </p>
+                                <p>
+                                    <input type="email" placeholder="Your email"
+                                        class="contactLetter letterText messageInfo">
+                                </p>
+                                <p>
+                                    <input type="submit" id="send" value="Send" class="contactLetter">
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </form>
         </main>
 
         <footer>

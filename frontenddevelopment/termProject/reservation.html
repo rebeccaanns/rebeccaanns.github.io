@@ -13,7 +13,8 @@
 <body>
     <div class="wrapper">
         <header>
-            <a href="index.html"><img src="images/heading.png" alt="Temple Inn and Suites Title Image" class="headImg"></a>
+            <a href="index.html"><img src="images/heading.png" alt="Temple Inn and Suites Title Image"
+                    class="headImg"></a>
         </header>
 
         <nav>
@@ -28,11 +29,100 @@
         </nav>
 
         <main>
+            <h1 class="resHead">Make a Reservation Now!</h1>
+            <h2 class="resHead">Experience a Piece of Heaven</h2>
 
+            <form action="thanks.html" method="GET">
+                <fieldset>
+                    <legend>Reservation Information</legend>
+                    <div class="resGroup">
+                        <label for="location" class="top">Location:</label>
+                        <input list="location" required class="resInput">
+                        <datalist id="location">
+                            <option value="Campinas">Campinas, Sao Paulo, Brazil</option>
+                            <option value="Kona">Kailua-Kona, Hawaii, United States</option>
+                            <option value="Paris">Le Chesnay, France</option>
+                            <option value="Rexburg">Rexburg, Idaho, United States</option>
+                        </datalist>
+                    </div>
+
+                    <div class="resGroup">
+                        <label for="checkIn" class="top">Check In:</label>
+                        <input type="date" id="checkIn" name="checkIn" required class="resInput">
+                        
+                        <label for="checkOut" class="top">Check Out:</label>
+                        <input type="date" id="checkOut" name="checkOut" required class="resInput">
+                    </div>
+
+                    <div class="resGroup">
+                        <label for="numGuests" class="top">Number of Guests:</label>
+                        <input type="number" id="numGuests" name="numGuests" required class="resInput">
+                    </div>
+
+                    <div class="resGroup">
+                        <label for="numRooms" class="top">Number of Rooms:</label>
+                        <input type="number" id="numRooms" name="numRooms" required class="resInput">
+                    </div>
+
+                    <div class="resGroup">
+                        <label for="roomType" class="top">Room Type</label>
+                        <select name="roomType" id="roomType" required class="resInput">
+                            <option value="" selected disabled>Select Room</option>
+                            <option value="2 Queen Beds">2 Queen Beds</option>
+                            <option value="1 King Bed">1 King Bed</option>
+                            <option value="Suite">Suite</option>
+                            <option value="Apartment">Apartment</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Registrant Information</legend>
+                    <div class="resGroup">
+                        <label for="firstName" class="top">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required class="resInput">
+
+                        <label for="middleName" class="top">Middle Initial:</label>
+                        <input type="text" id="middleName" name="middleName" class="resInput">
+
+                        <label for="lastName" class="top">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" required class="resInput">
+                    </div>
+
+                    <div class="resGroup"> 
+                        <label for="email" class="top">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="user@email.com" required class="resInput">
+                    </div>
+
+                    <div class="resGroup">
+                        <label for="phoneNumber" class="top">Phone Number:</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" class="resInput">
+                    </div>
+                    
+                    <div class="resGroup">
+                        <label for="home" class="top">Home State/Country:</label>
+                        <input type="text" id="home" name="home" class="resInput">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Special Accomodations</legend>
+                    <div class="resGroup">
+                        <label for="comments" class="top" id="specialAccomodations">Please write any special accomodations or comments you would like us to know for your stay.</label>
+                        <textarea name="comments" id="comments" cols="30" rows="10" class="resInput"></textarea>
+                    </div>
+                </fieldset>
+                    <div class="resGroup">
+                        <input type="submit" value="Submit" id="submit" class="resSubmit">
+                    </div>
+            </form>
         </main>
 
         <footer>
-
+            <div class="socialMedia">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+            <p>&copy; Temple Inn & Suites | <a href="resources.html">Resources</a></p>
         </footer>
         <script src="scripts/main.js"></script>
     </div>

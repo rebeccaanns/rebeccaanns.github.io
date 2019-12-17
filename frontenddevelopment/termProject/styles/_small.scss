@@ -20,69 +20,68 @@ footer{
     text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6{
-    font-family: $headFont;
-    color: $textColor;
+form{
+    fieldset{
+        margin: 2rem;
+        border: 2px solid $accentOne;
+        border-radius: 10px;
+        padding: 1rem 2%;
+    }
+    legend{
+        color: $mainOne;
+        margin: 0 1rem;
+        padding: 0 .5rem;
+    }
+    label.top{
+        display: block;
+        padding-top: 1rem;
+        color: $mainOne;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
 }
 
-p, a, li{
+h1, h2, h3, h4, h5, h6{
+    font-family: $headFont;
+    color: $mainOne;
+}
+
+p, a, li, button, div, legend, input, textarea{
     font-family: $mainFont;
     color: $textColor;
 }
 
 /* CLASSES */
+.cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    article{
+        background-color: $accentOne;
+        margin: 5px;
+        text-align: center;
+    }
+    div{
+        padding: 5px 2px;
+    }
+    li{
+        list-style-type: none;
+        padding: 0px 25px;
+        margin-top: 10px;
+    }
+    img{
+        width: 80%;
+    }
+    label{
+        font-weight: bolder;
+        color: white;
+    }
+}
 .contactLetter{
     line-height: 1.5rem;
     border: 0;
     outline: none;
     appearance: none;
     font-family: $mainFont;
-}
-
-.envelope{
-    margin: auto;
-    &.front{
-        width: 10rem;
-        height: 6rem;
-        border-radius: 0 0 1rem 1rem;
-        overflow: hidden;
-        z-index: 9999;
-        opacity: 0;
-        &::before, &::after{
-            position: absolute;
-            display: block;
-            width: 12rem;
-            height: 6rem;
-            background-color: $mainOne;
-            transform: rotate(30deg);
-            transform-origin: 0 0;
-            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-            content: '';
-        }
-        &::after{
-            right: 0;
-            transform: rotate(-30deg);
-            transform-origin: 100% 0;
-        }
-    }
-    &.back{
-        top: -4rem;
-        width: 10rem;
-        height: 10rem;
-        overflow: hidden;
-        z-index: -9998;
-        opacity: 0;
-        transform: translateY(-6rem);
-        &::before{
-            display: block;
-            width: 10rem;
-            height: 10rem;
-            background-color: $mainOne;
-            border-radius: 1rem;
-            content: "";
-            transform: scaleY(.6) rotate(45deg);
-        }
-    }
 }
 
 .fade{
@@ -115,6 +114,7 @@ p, a, li{
 .navigation{
     width: 80%;
     margin-top: -10px;
+    text-align: center;
     a{
         display: block;
         text-align: center;
@@ -157,30 +157,82 @@ p, a, li{
     border-radius: 3px 0 0 3px;
 }
 
+.resGroup{
+    display: flex;
+    flex-direction: column;
+}
+
+.resHead{
+    text-align: center;
+}
+
+.resInput{
+    -webkit-appearance: none;
+    font-size: 1rem;
+    border: 2px solid $accentOne;
+    border-radius: 4px;
+    padding: .75rem;
+    width: 80%;
+    max-width: 20rem;
+    margin: 0 auto;
+    &:required{
+        border-left: 6px solid $mainOne;
+        &:valid{
+            border-left: 6px solid $mainTwo;
+        }
+    }
+}
+
+.resSubmit{
+    width: 100%;
+    max-width: 6rem;
+    margin: 0 auto;
+    border: none;
+    background-color: $mainTwo;
+    color: white;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+}
+
 .responsive li{
     display: block;
 }
 
-.sent{
-    & .letter{
-        animation: scaleLetter 1s forwards ease-in;
-    }
-    & .side::nth-of-type(1){
-        transform-origin: 0 100%;
-        animation: closeLetter .66s forwards ease-in;
-        h1, textarea{
-            animation: fadeOutText .66s forwards linear;
+.serviceSect{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+    margin-left: 5%;
+    article{
+        background-color: $mainOne;
+        width: 90%;
+        text-align: center;
+        vertical-align: middle;
+        padding: 13px;
+        img{
+            width: 60%;
         }
-    }
-    & .envelope{
-        animation: fadeInEnvelope .5s 1.33s forwards ease-in;
-    }
-    & #letterMessage{
-        opacity: 1;
-        transform: translateY(12rem);
-    }
-    & #enter{
-        opacity: 0;
+        h2{
+            color: white;
+        }
+        button{
+            display: block;
+            margin: 0 auto;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            border-color: transparent;
+            background-color: $mainTwo;
+            font-size: 1.2rem;
+            transition: background-color 0.2s;
+            & a{
+                color: white;
+                &:hover{
+                    border: 1px solid white;
+                    padding: 3px;
+                    color: white;
+                }
+            }
+        }
     }
 }
 
@@ -218,6 +270,9 @@ p, a, li{
     font-size: 20px;
     text-align: center;
     margin-top: 3%;
+    h5{
+        margin-bottom: 14px;
+    }
     a{
         width: 25px;
         height: 25px;
@@ -257,20 +312,47 @@ p, a, li{
     }
 }
 
+.thanksPic{
+    width: 100%;
+}
+
+.thanksText{
+    font-size: .75rem;
+    position: absolute;
+    top: 8px;
+    width: 100%;
+    text-align: center;
+    background: rgba(218,210,216,.3);
+    color: white;
+}
+
+.whiteHead{
+    color: white;
+}
+
 .wrapper{
     background-color: white;
     margin: 50px;
-    border: 2px solid;
+    border: 2px solid $textColor;
 }
 /* ID'S */
+#amenities{
+    h2, p{
+        text-align: center;
+    }
+    & .slideText{
+        text-align: right;
+    }
+}
+
 #contactSection{
     text-align: center;
 }
 
-// #contactWrapper{
-//     width: 50rem;
-//     background-color: white;
-// }
+#contactWrapper{
+    width: 50rem;
+    background-color: white;
+}
 
 #cWrap{
     position: absolute;
@@ -285,16 +367,8 @@ p, a, li{
 }
 
 #letter{
-    width: 50rem;
     margin: auto;
     perspective: 60rem;
-}
-
-#letterMessage{
-    opacity: 0;
-    transition: all .3s 2s;
-    transform: translateY(9rem);
-    z-index: -9999;
 }
 
 #message{
@@ -315,32 +389,46 @@ p, a, li{
         opacity: .85;
     }
 }
-/* KEYFRAMES */
-@keyframes closeLetter{
-    50% {transform: rotateX(-90deg);}
-    100% {transform: rotateX(-180deg);}
+
+#services{
+    margin-bottom: 40px;
+    h2, p{
+        text-align: center;
+    }
+    li{
+        list-style-type: none;
+        padding: 10px;
+        font-size: 1.1em;
+        &:nth-child(odd){
+            background-color: $accentOne; 
+        }
+        &:hover{
+            background-color: $mainTwo;
+            font-size: 1.2em;
+            color: white;
+        }
+    }
 }
 
+#slogan{
+    text-align: center;
+    color: white;
+    background-color: $accentOne;
+    padding: 10px;
+}
+
+#specialAccomodations{
+    width: 17rem;
+    text-align: center;
+}
+
+#thanksSlides{
+    max-width: 100%;
+    position: relative;
+}
+
+/* KEYFRAMES */
 @keyframes fade{
     from {opacity: .4}
     to {opacity: 1}
-}
-
-@keyframes fadeInEnvelope{
-    0% {opacity: 0; transform: translateY(8rem);}
-    100% {opacity: 1; transform: translateY(4.5rem);}
-}
-
-@keyframes fadeOutText{
-    49% {opacity: 1;}
-    50% {opacity: 0;}
-    100% {opacity: 0;}
-}
-
-@keyframes scaleLetter{
-    66% {transform: translateY(-8rem) scale(.5, .5);}
-    75% {transform: translateY(-8rem) scale(.5, .5);}
-    90% {transform: translateY(-8rem) scale(.3, .5);}
-    97% {transform: translateY(-8rem) scale(.33, .5);}
-    100% {transform: translateY(-8rem) scale(.3, .5);}
 }

@@ -24,11 +24,6 @@
                 <li><a href="temple.html">Temples</a></li>
                 <li><a href="reservation.html">Reservations</a></li>
                 <li><a href="services.html" class="active">Services</a>
-                    <!-- <ul class="dropdown">
-                        <li></li>
-                        <li><a href="reception.html">Receptions</a></li>
-                        <li><a href="missionaries.html">Temple Missionaries</a></li>
-                    </ul> -->
                 </li>
                 <li><a href="contact.html" class="lineRight">Contact Us</a></li>
             </ul>
@@ -36,7 +31,7 @@
 
         <main>
             <!-- Services -->
-            <section>
+            <section id="services">
                 <h2>Services</h2>
                 <p>We have many services availiable to our guests. Here is some information on the items availiable for
                     your use.</p>
@@ -53,42 +48,79 @@
             </section>
 
             <!-- Amenities -->
-            <section>
+            <section id="amenities">
                 <h2>Free Amenities</h2>
                 <p>There are many free amenities availiable for all our guests at all our locations.</p>
-                <ul>
-                    <li>Breakfast</li>
-                    <li>Exercise/workout room</li>
-                    <li>Indoor pool</li>
-                    <li>WiFi high-speed internet access and smart TVs</li>
-                    <li>Parking</li>
-                    <li>Temple shuttle</li>
-                    <li>Family history consultation and family ordinance card service</li>
-                </ul>
+                <div class="slideWrapper">
+                    <div class="slides fade">
+                        <img src="images/placeholder.jpg" data-src="images/hotBreakfast.jpg"
+                            alt="Photo by Megan Savoie on Unsplash">
+                        <div class="slideText">Breakfast</div>
+                    </div>
+                    <div class="slides fade">
+                        <img src="images/placeholder.jpg" data-src="images/gym.jpg" alt="Photo by chuttersnap on Unsplash">
+                        <div class="slideText">Exercise Room</div>
+                    </div>
+                    <div class="slides fade">
+                        <img src="images/placeholder.jpg" data-src="images/outdoorPool.jpg" alt="Photo by Camille Chen on Unsplash">
+                        <div class="slideText">Outdoor Pool</div>
+                    </div>
+                    <div class="slides fade">
+                        <img src="images/placeholder.jpg" data-src="images/indoorPool.jpg" alt="Photo by lu jianfeng on Unsplash">
+                        <div class="slideText">Indoor Pool</div>
+                    </div>
+                    <div class="slides fade">
+                        <img src="images/placeholder.jpg" data-src="images/wifi.jpg" alt="Photo by Patricia Prudente on Unsplash">
+                        <div class="slideText">WiFi, High-speef Internet Access, and Smart TVs</div>
+                    </div>
+                    <div class="slides fade">
+                        <img src="images/placeholder.jpg" data-src="images/parking.jpg" alt="Photo by Ruffa Jane Reyes on Unsplash">
+                        <div class="slideText">Parking</div>
+                    </div>
+                    <div class="slides fade">
+                        <img src="images/placeholder.jpg" data-src="images/bus.jpg" alt="Photo by Church of the King on Unsplash">
+                        <div class="slideText">Temple Shuttle</div>
+                    </div>
+                    <div class="slides fade">
+                        <img src="images/placeholder.jpg" data-src="images/computerLab.jpg" alt="Photo by Jonathan Borba on Unsplash">
+                        <div class="slideText">Family History Consultation & Family Ordinance Card Service</div>
+                    </div>
+                    <div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                </div>
             </section>
 
             <!-- Sub Pages -->
-            <section>
+            <section class="serviceSect">
                 <article>
-                    <h2>Reception Hall</h2>
-                    <p></p>
-                    <img src="images/receptionHall.jpg" alt="Background photo created by prostooleh - www.freepik.com">
-                    <button></button>
+                <h2>Reception Hall</h2>
+                <img src="images/receptionHall.jpg" alt="Background photo created by prostooleh - www.freepik.com"
+                    class="servicePics">
+                <p>Our reception hall is availiable for reservation everyday of the week, except Sunday. There many accommodations availiable including food services and setup. Click below for more information.</p>
+                <button type="button"><a href="reception.html">More</a></button>
                 </article>
 
                 <article>
-                    <h2>Full-Time Temple Missionaries</h2>
-                    <p></p>
-                    <img src="" alt="">
-                    <button></button>
+                <h2>Full-Time Temple Missionaries</h2>
+                <img src="images/couple.jpg" alt="Photo by Katherine Hanlon on Unsplash" class="servicePics">
+                <p>We have suite apartments availiable for rent for full-time missionary couples in the area. There are many ammenities that come with the apartments. Click below for more information. </p>
+                <button type="button"><a href="missionaries.html">More</a></button>
                 </article>
             </section>
         </main>
 
         <footer>
-
+            <div class="socialMedia">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+            <p>&copy; Temple Inn & Suites | <a href="resources.html">Resources</a></p>
         </footer>
         <script src="scripts/main.js"></script>
+        <script src="scripts/lazyload.js"></script>
     </div>
 </body>
 

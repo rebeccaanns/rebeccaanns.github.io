@@ -6,26 +6,26 @@ function toggleMenu() {
 let slideIndex = 1;
 showSlides(slideIndex);
 
-function plusSlides(n){
+function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
-function currentSlide(n){
+function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
-function showSlides(n){
+function showSlides(n) {
     let slides = document.getElementsByClassName("slides");
 
-    if (n > slides.length){
+    if (n > slides.length) {
         slideIndex = 1;
     }
 
-    if (n < 1){
+    if (n < 1) {
         slideIndex = slide.length;
     }
 
-    for(var i = 0; i < slides.length; i++){
+    for (var i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
 
@@ -33,8 +33,8 @@ function showSlides(n){
 }
 
 //CONTACT FORM
-function addClass() {
-    document.body.classList.add("sent");
-}
+// function addClass() {
+//     document.body.classList.add("sent");
+// }
 
-letterMessage.addEventListener("click", addClass());
+// send.addEventListener("click", addClass);
