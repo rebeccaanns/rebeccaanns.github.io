@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Practice</title>
+
+    <script>
+        function loadStory(){
+            var storyName = document.getElementById("nameInput").value;
+            var storyHTML = localStorage.getItem(storyName);
+            document.getElementById("storyEditor").value = storyHTML;
+        }
+
+        function saveStory(){
+            var storyName = document.getElementById("nameInput").value;
+            var storyHTML = document.getElementById("storyEditor").value;
+            localStorage.setItem(storyName, storyHTML);
+        }
+
+        function displayStory(){
+            var storyHTML = document.getElementById("storyEditor").value;
+            document.getElementById("storyDisplay").innerHTML = storyHTML;
+        }
+    </script>
+
+    <style>
+        textarea{
+            width: 500px;
+            height: 250px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>Story Editor</h1>
+    Story Name:<input id="nameInput"></input>
+    <section>
+        <button onclick="loadStory()">Find and Edit It</button>
+        <button onclick="saveStory()">Save It</button>
+        <button onclick="displayStory()">Display It</button>
+    </section>
+    <textarea id="storyEditor" placeholder="Write your story here!"></textarea>
+
+    <section id="storyDisplay"></section>
+</body>
+</html>
