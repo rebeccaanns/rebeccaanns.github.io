@@ -34,13 +34,13 @@ header,
 footer,
 footer a {
     text-align: center;
-    background-color: #70EFE7;
+    background-color: #17BEBB;
     color: whitesmoke;
 }
 
 header img {
     width: auto;
-    height: auto;
+    height: 206px;
     box-shadow: 5px 5px 5px gray
 }
 
@@ -50,5 +50,5 @@ footer{
 
 ul{
     margin: 0 auto;
-    max-width: 300px;
+    max-width: 400px;
 }
