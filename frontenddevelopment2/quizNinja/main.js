@@ -1,42 +1,81 @@
-// alert(`Welcome to Quiz Ninja!`);
-
-// const question = "What is Superman's real name?";
-// const answer = prompt(question);
-// alert(`You answered ${answer}`);
-
-const quiz = [
-    ["What is Superman's real name?", "Clark Kent"],
-    ["What is Wonder Woman's real name?", "Diana Prince"],
-    ["What is Batman's real name?", "Bruce Wayne"]
+const quiz = [{
+        name: "Superman",
+        realName: "Clark Kent"
+    },
+    {
+        name: "Wonder Woman",
+        realName: "Diana Prince"
+    },
+    {
+        name: "Batman",
+        realName: "Bruce Wayne"
+    },
 ];
 
-//main game loop
-function start(quiz) {
-    let score = 0; //initialize
-
-    for (const [question, answer] of quiz) {
-        const response = ask(question);
-        check(response, answer);
+//view object
+const view = {
+    score: document.querySelector('#score strong'),
+    question: document.getElementById('question'),
+    result: document.getElementById('result'),
+    info: document.getElementById('info'),
+    render(target, content, attributes) {
+        for (const key in attributes) {
+            target.setAttribute(key, attributes[key]);
+        }
+        target.innerHTML = content;
+    },
+    start: document.getElementById('start'),
+    show(element){
+        element.style.display = "block";
+    },
+    hide(element){
+        element.style.display = "none";
     }
+};
 
-    gameOver();
+const game = {
+    //main game loop
+    start(quiz) {
+        this.questions = [...quiz];
+        this.score = 0; //initialize
 
-    function ask(question) {
-        return prompt(question);
-    }
+        for (const question of this.questions) {
+            this.question = question;
+            this.ask();
+        }
 
-    function check(response, answer) {
+        this.gameOver();
+
+        view.hide(view.start);
+    },
+
+    ask() {
+        const question = `What is ${this.question.name}'s real name?`;
+        view.render(view.question, question);
+        const response = prompt(question);
+        this.check(response);
+    },
+
+    check(response) {
+        const answer = this.question.realName;
         if (response === answer) {
+            view.render(view.result, 'Correct!', {'class':'correct'});
             alert("Correct!");
-            score++;
+            this.score++;
+            view.render(view.score, this.score);
         } else {
+            view.render(view.result, `Wrong! The correct answer was ${answer}`, {'class':'wrong'});
             alert(`Wrong! The correct answer was ${answer}`);
         }
+    },
+
+    gameOver() {
+        //At the end, report the score
+        view.render(view.info, `Game over! Your scored ${this.score} point${this.score !== 1 ? 's' : ""}`);
+
+        view.show(view.start);
     }
 
-    function gameOver() {
-        //At the end, report the score
-        alert(`Game over! Your scored ${score} point${score !== 1 ? 's' : ""}`);
-    }
 }
-start(quiz);
+
+view.start.addEventListener('click', () => game.start(quiz), false);
