@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Use the console to practice using the Human and Superhuman Objects</p>
+    <script>
+        //human
+        const Human = {
+            arms: 2,
+            legs: 2,
+            walk() {
+                console.log("Walking");
+            }
+        }
+
+        const lois = Object.create(Human);
+        lois.name = "Lois Lane";
+        lois.job = "Reporter";
+
+        //superhuman
+        const Superhuman = Object.create(Human);
+        Superhuman.change = function () {
+            return `${this.realName} goes into a phone box and comes out as ${this.name}!`;
+        }
+        Superhuman.name = "Name Needed";
+        Superhuman.realName = "Real Name Needed";
+
+        Superhuman.init = function (name, realName) {
+            this.name = name;
+            this.realName = realName;
+            this.init = undefined;
+            return this;
+        }
+
+        //mix in, so that every object inherits the method and augment itself.
+        function mixin(target, ...objects) {
+            for (const object of objects) {
+                if (typeof object === 'object') {
+                    for (const key of Object.keys(object)) {
+                        if (typeof object[key] === 'object') {
+                            target[key] = Array.isArray(object[key]) ? [] : {};
+                            mixin(target[key], object[key]);
+                        } else {
+                            Object.assign(target, object);
+                        }
+                    }
+                }
+            }
+            return target;
+        }
+
+        //copy, so changes to either object doesn't affect the other
+        function copy(target) {
+            const object = Object.create(Object.getPrototypeOf(target));
+            mixin(object, target);
+            return object;
+        }
+
+        const superman = Object.create(Superhuman);
+        superman.name = "Superman";
+        superman.realName = "Clark Kent";
+
+        const batman = Object.create(Superhuman).init('Batman', 'Bruce Wayne');
+
+        const aquaman = Object.create(Superhuman).init('Aquaman', 'Arthur Curry');
+
+        const wonderWoman = Object.create(Superhuman);
+        mixin(wonderWoman, {
+            name: 'Wonder Woman',
+            realName: 'Diana Prince'
+        });
+
+        //factory function to return an object
+        //uses copy to make a superhuman object and then uses the mixin to augment properties and methods
+        function createSuperhuman(...mixins) {
+            const object = copy(Superhuman);
+            return mixin(object, ...mixins);
+        }
+
+        const hulk = createSuperhuman({
+            name: 'Hulk',
+            realName: 'Bruce Banner'
+        });
+
+        //super power mixins
+        const flight = {
+            fly() {
+                console.log(`Up, up and away! ${this.name} soars through the air!`);
+                return this;
+            }
+        }
+
+        const superSpeed = {
+            move() {
+                console.log(`${this.name} can move faster than a speeding bullet!`);
+                return this;
+            }
+        }
+
+        const xRayVision = {
+            xray() {
+                console.log(`${this.name} can see right through you!`);
+                return this;
+            }
+        }
+
+        mixin(superman, flight, superSpeed, xRayVision);
+        mixin(wonderWoman, flight, superSpeed);
+
+        const flash = createSuperhuman({name: "Flash", realName: "Barry Allen"}, superSpeed);
+    </script>
+</body>
+
+</html>
