@@ -1,0 +1,121 @@
+//DECLARATIONS
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Condensed:ital,wght@0,300;1,300&display=swap');
+
+$head: 'Abril Fatface', cursive;
+$body: 'Roboto Condensed', sans-serif;
+$pink: #F1A3B1;
+$lPink: #F4D6CC;
+
+//ID'S
+#heading{
+    text-align: center;
+    font-size: 4rem;
+}
+
+#wrapper{
+    margin: 0 auto;
+}
+
+
+//CLASSES
+.addButton, .deleteButton, .checkOffButton{
+    color: $lPink;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    :hover {
+        color:$pink;
+    }
+}
+
+.completed{
+    text-decoration: line-through;
+}
+
+.deleteButton, .checkOffButton{
+    font-size: 1.1rem;
+    padding: .5rem;
+}
+
+.fa-trash, .fa-circle-check{
+    pointer-events: none;
+}
+
+.filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid gray;
+    color: gray;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 10px auto;
+}
+
+.inside form, .inside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toDo{
+    background-color: white;
+    margin: .2rem;
+    color: gray;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li {
+        flex: 1;
+    }
+}
+
+.toDoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toDoItem{
+    padding: 0rem .5rem;
+}
+
+.toDoList{
+    min-width: 50%;
+    list-style: none;
+}
+
+//ELEMENTS
+body{
+    background-image: linear-gradient(120deg, $lPink, $pink);
+}
+
+form input, form button{
+    padding: .5rem;
+    font-size: 1.2rem;
+    border: none;
+    background-color: white;
+    color: gray;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $head;
+    color: white;
+}
+
+p, button, input, li{
+    font-family: $body;
+}
+
+
+//MEDIUM
+@media only screen and (min-width: 32.5em) {
+    #wrapper{
+        width: 80%;
+    }
+}
+
+//LARGE
+@media only screen and (min-width: 60em) {}
