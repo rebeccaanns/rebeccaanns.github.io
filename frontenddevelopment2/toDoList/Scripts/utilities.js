@@ -1,4 +1,6 @@
-import { removeLocal } from "./ls.js";
+import {
+    removeLocal
+} from "./ls.js";
 
 const toDoList = document.querySelector(".toDoList");
 const filterOption = document.querySelector(".filter")
@@ -25,24 +27,22 @@ function deleteCheck(e) {
 
 function filter(e) {
     const toDos = toDoList.childNodes;
-    toDos.forEach(function(toDo){
-        switch(e.target.value){
+    toDos.forEach(function (toDo) {
+        switch (e.target.value) {
             case "all":
                 toDo.style.display = "flex";
                 break;
             case "completed":
                 if (toDo.classList.contains('completed')) {
                     toDo.style.display = "flex";
-                }
-                else{
+                } else {
                     toDo.style.display = "none";
                 }
                 break;
             case "active":
-                if (!toDo.classList.contains('completed')){
+                if (!toDo.classList.contains('completed')) {
                     toDo.style.display = "flex";
-                }
-                else{
+                } else {
                     toDo.style.display = "none";
                 }
         }
@@ -50,4 +50,7 @@ function filter(e) {
 
 }
 
-export {deleteCheck, filter}
+export {
+    deleteCheck,
+    filter
+}

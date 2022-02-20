@@ -59,7 +59,7 @@ function getToDos() {
     });
 }
 
-function removeLocal(toDo){
+function removeLocal(toDo) {
     let toDos;
 
     if (localStorage.getItem('toDos') === null) {
@@ -75,5 +75,7 @@ function removeLocal(toDo){
 }
 
 export {
-    saveLocal, getToDos, removeLocal
+    saveLocal,
+    getToDos,
+    removeLocal
 }

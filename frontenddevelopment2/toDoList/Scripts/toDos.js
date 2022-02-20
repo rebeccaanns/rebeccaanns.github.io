@@ -49,9 +49,19 @@ function addToDo(event) {
     toDoInput.value = "";
 }
 
-import { deleteCheck } from "./utilities.js";
-import { filter } from "./utilities.js";
-import { saveLocal } from "./ls.js";
-import { getToDos } from "./ls.js";
+import {
+    deleteCheck
+} from "./utilities.js";
+import {
+    filter
+} from "./utilities.js";
+import {
+    saveLocal
+} from "./ls.js";
+import {
+    getToDos
+} from "./ls.js";
 
-export {addToDo}
+export {
+    addToDo
+}
