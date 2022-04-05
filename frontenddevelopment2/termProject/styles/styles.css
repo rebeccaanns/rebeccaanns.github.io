@@ -1,20 +1,130 @@
+a {
+  text-decoration: none;
+  font-size: larger;
+  font-family: "Lobster Two", cursive;
+  color: #8C2155;
+}
+
+a:hover {
+  color: white;
+}
+
+#animal {
+  display: -ms-grid;
+  display: grid;
+}
+
+body {
+  background: linear-gradient(-45deg, #DAFFEF, #D0FFD6);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 5s ease infinite;
+          animation: gradient 5s ease infinite;
+  height: 100vh;
+  margin-left: 5%;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+button {
+  margin-top: 2%;
+  background: none;
+  border: 3px solid #8C2155;
+  padding: 1em;
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background: #8C2155;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+button:hover {
+  background-color: #8C2155;
+  border-color: white;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+button:hover::after {
+  width: 240px;
+  height: 240px;
+  top: -100px;
+  left: 3px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Lobster Two", cursive;
 }
 
 h1 {
-  color: #E5625E;
+  color: #D3C0D2;
+  font-size: 3.5em;
 }
 
 h2 {
   font-style: italic;
+  color: #A6979C;
+  font-size: 2rem;
+  margin-top: -5%;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #8C2155;
+}
+
+img {
+  max-width: 100%;
+  max-height: 50%;
+  -webkit-box-shadow: 10px 10px 10px #A6979C;
+          box-shadow: 10px 10px 10px #A6979C;
 }
 
 p, span, label {
   font-family: "Lato", sans-serif;
+  color: #262322;
+  font-size: 1.5rem;
 }
 
-img {
-  max-width: 50%;
+@media only screen and (min-width: 32.5em) {
+  #animal {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 5%;
+            column-gap: 5%;
+  }
+  #everything {
+    margin-top: 30%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -13,24 +13,30 @@ fetch("https://zoo-animal-api.herokuapp.com/animals/rand/", requestOptions)
 
 function displayAnimal(result) {
     const animalDiv = document.getElementById("animal");
+    const headDiv = document.createElement('div');
 
     //name
     const animalName = result.name;
     const nameHeading = document.createElement("h1");
     nameHeading.innerHTML = animalName;
-    animalDiv.appendChild(nameHeading);
+    headDiv.appendChild(nameHeading);
 
     //latin name
     const latinName = result.latin_name;
     const latinHeading = document.createElement("h2")
     latinHeading.innerHTML = latinName;
-    animalDiv.appendChild(latinHeading);
+    headDiv.appendChild(latinHeading);
+
+    animalDiv.appendChild(headDiv);
+
+    const everythingDiv = document.createElement('div');
+    everythingDiv.setAttribute("id", "everything");
 
     //type
     const type = result.animal_type;
     const typeHeading = document.createElement("h3")
     typeHeading.innerHTML = type;
-    animalDiv.appendChild(typeHeading);
+    everythingDiv.appendChild(typeHeading);
 
     //SIZE
     //size divs
@@ -77,7 +83,7 @@ function displayAnimal(result) {
     sizeDiv.appendChild(lengthDiv);
     sizeDiv.appendChild(weightDiv);
 
-    animalDiv.appendChild(sizeDiv);
+    everythingDiv.appendChild(sizeDiv);
 
     //LIVING
     //living divs
@@ -106,7 +112,7 @@ function displayAnimal(result) {
     livingDiv.appendChild(habitatDiv);
     livingDiv.appendChild(geoDiv);
 
-    animalDiv.appendChild(livingDiv);
+    everythingDiv.appendChild(livingDiv);
 
     //LIFE
     //life divs
@@ -138,7 +144,7 @@ function displayAnimal(result) {
     lifeDiv.appendChild(ageDiv);
     lifeDiv.appendChild(foodDiv);
 
-    animalDiv.appendChild(lifeDiv);
+    everythingDiv.appendChild(lifeDiv);
 
     //picture
     let imageDiv = document.createElement('div');
@@ -147,6 +153,8 @@ function displayAnimal(result) {
 
     imageDiv.appendChild(image);
 
-    animalDiv.appendChild(imageDiv);
+    headDiv.appendChild(imageDiv);
+
+    animalDiv.appendChild(everythingDiv);
 
 }
