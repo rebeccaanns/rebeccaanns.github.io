@@ -5,15 +5,102 @@
   color: #0892A5;
 }
 
+.caption {
+  color: #EBF2FA;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #8BB17470;
+  padding: 8px 0px;
+  position: absolute;
+  bottom: 11%;
+  width: 29.6%;
+  text-align: center;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: 30%;
+}
+
+.numberText {
+  color: #EBF2FA;
+  font-size: 18px;
+  padding: 150px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  width: 70%;
+  margin-top: 10%;
+  padding: 18px;
+  color: #EBF2FA;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: .6s ease;
+  transition: .6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.prev :hover, .next :hover {
+  background-color: #8BB17470;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
 body {
   background-color: #EBF2FA;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Cormorant Garamond", serif;
 }
 
-p {
+p,
+div {
   font-family: "Raleway", sans-serif;
   color: #131112;
 }
