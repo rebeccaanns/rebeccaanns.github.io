@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+#name {
+  text-align: center;
+  color: #0892A5;
+}
+
+body {
+  background-color: #EBF2FA;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+  color: #131112;
+}
+/*# sourceMappingURL=styles.css.map */
