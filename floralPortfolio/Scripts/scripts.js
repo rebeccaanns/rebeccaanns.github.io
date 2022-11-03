@@ -1,26 +1,45 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+"use strict";
 
-//next button controls
-function plusSlides(n){
-    showSlides(slideIndex += n);
-}
+(function(){
+    let modal = document.querySelector(".modal");
 
-function showSlides(n){
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    
-    if (n > slides.length){
-        slideIndex = 1;
+    let modalOverlay = document.querySelector(".modalOverlay");
+
+    let closeButton = document.querySelector(".modalOverlayClose");
+
+    let modalImage = document.querySelector(".modalImg");
+
+    let images = document.querySelectorAll(".imageGridImg");
+
+    for(let i = 0; i < images.length; i++){
+        images[i].addEventListener("click", openModalEvent);
     }
 
-    if (n < 1) {
-        slideIndex = slides.length;
+    function openModalEvent(evt){
+        modal.classList.toggle("closed");
+
+        modalOverlay.classList.toggle("closed");
+
+        modalImage.src = evt.target.src.replace("300x200", "560x360");
     }
 
-    for (i = 0; i < slides.length; i++){
-        slides[i].style.display = "none";
+    closeButton.addEventListener('click', closeButtonEvent);
+
+    function closeButtonEvent(){
+        closeButtonEvent.stopPropagation();
+
+        modal.classList.toggle("closed");
+
+        modalOverlay.classList.toggle("closed");
     }
 
-    slides[slideIndex-1].style.display = "block";
-}
+    modalOverlay.addEventListener('click', closeModalEvent);
+
+    function closeModalEvent(){
+        modal.classList.toggle("closed");
+
+        modalOverlay.classList.toggle("closed");
+    }
+})();
+
+onclick="this.paused ? this.play() : this.pause();"
